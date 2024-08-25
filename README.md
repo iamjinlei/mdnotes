@@ -1,3 +1,7 @@
++++
+banner: assets/banner_1280.jpg
++++
+
 # Reading Notes
 
 ## History
