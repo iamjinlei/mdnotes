@@ -1,3 +1,10 @@
++++
+navi:
+    - Home=/
+left_pane: toc
++++
+
+
 # 1 Financial Contracts
 
 * Forward contract: the parties agree on the terms now, but the actual exchange of money for goods does not take place util some later date, the maturity or expiration date.

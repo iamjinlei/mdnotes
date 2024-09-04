@@ -1,6 +1,7 @@
 +++
 navi:
     - Home=/
+left_pane: toc
 +++
 
 
