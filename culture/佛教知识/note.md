@@ -1,8 +1,8 @@
-+++
-navi:
+<!---
+nav:
     - Home=/
 left_pane: toc
-+++
+--->
 
 
 # 三圣

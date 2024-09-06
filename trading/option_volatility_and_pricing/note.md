@@ -1,9 +1,10 @@
-+++
-navi:
+<!---
+nav:
     - Home=/
 left_pane: toc
-+++
+--->
 
+<ins type=book_bib title="Option Volatility and Pricing (2nd Edition)" author="Sheldon Natenberg" cover=imgs/cover.jpg link=https://www.amazon.com/Option-Volatility-Pricing-Strategies-Techniques/dp/0071818774></ins>
 
 # 1 Financial Contracts
 
@@ -369,7 +370,9 @@ Short put 95 (at price 2.25) position value:
     | -3% every three months | -11.47% |
 * Volatility can also be compounded at different intervals. The Black-Scholes model is a continuous-time model. The model assumes that volatility is compounded continuously, just as if the price changes in the underlying contract, are taking place continuously but at an annual rate corresponding to the volatility associated with the contract.
 * When the percent price changes are ***normally distributed***, the continuous compounding of these price changes will result in a ***lognormal distribution*** of the prices at expiration.
+
     <img src="imgs/fig6_7.png" alt="fig6_7" style="width:70%;"/>
+
 * Continuous rates of return can be calculated using exponential function: e^x
 
 ## Interpreting Volatility Data
@@ -443,8 +446,11 @@ Short put 95 (at price 2.25) position value:
 
 * At expiration, an option is worth exactly its intrinsic value.
 * Prior to expiration, the theoretical value of an option is a curve that will approach intrinsic value as the option goes very deeply into the money or very far out of the money.
+
     <img src="imgs/fig7_4.png" alt="fig7_4" style="width:70%;"/>
+
     <img src="imgs/fig7_5.png" alt="fig7_5" style="width:70%;"/>
+
 * The delta of a call at any given underlying price is the slope of the graph - the rate of change in the option's value with respect to movement in the underlying contract.
     * A convention is to express delta values as a whole number by drop the decimal point (e.g. slope 1.00 equals delta 100).
 * Assuming all other market conditions remain unchanged:
@@ -475,6 +481,7 @@ Short put 95 (at price 2.25) position value:
     * The delta falls by the amount of the gamma when the underlying falls.
 
     <img src="imgs/fig7_6.png" alt="fig7_6" style="width:70%;"/>
+
 * Calls and puts with the same exercise price and time to expiration have the same gamma values (always positive).
 * A positive gamma position can be created by buying options (either calls or puts). It will gain delta as market rises and lose delta as the market falls.
 * Delta is a measure of how an option's value changes if the underlying price changes. It represents an instantaneous measure at current price point. If price makes a sizable move, we should use gamma to help improve the estimate.
@@ -491,6 +498,7 @@ Short put 95 (at price 2.25) position value:
 * As time passes, the time-value portion gradually disappears until, at expiration, the option is worth exactly its intrinsic value.
 
     <img src="imgs/fig7_7.png" alt="fig7_7" style="width:70%;"/>
+
     <img src="imgs/fig7_8.png" alt="fig7_8" style="width:70%;"/>
 
 * Often expressed as negative number.
@@ -593,6 +601,7 @@ Short put 95 (at price 2.25) position value:
     * The effects of volatility and time on put deltas are similar, except the range is between -100 and 0.
 
         <img src="imgs/fig9_3.png" alt="fig9_3" style="width:70%;"/>
+
         <img src="imgs/fig9_4.png" alt="fig9_4" style="width:70%;"/>
 
     * Look at the effect in another way, as time passes or volatility declines, delta values move very quickly toward either 0 for out-of-the-money calls or 100 for in-the-money options.
@@ -607,6 +616,7 @@ Short put 95 (at price 2.25) position value:
 * Vanna and charm are at peaks (delta move more quickly toward/away from 50) at 20, 80 (for calls) and -80, -20 (for puts).
 
     <img src="imgs/fig9_6.png" alt="fig9_6" style="width:70%;"/>
+
     <img src="imgs/fig9_7.png" alt="fig9_7" style="width:70%;"/>
 
 ## Theta
@@ -625,6 +635,7 @@ Short put 95 (at price 2.25) position value:
     * These characteristics apply to both calls and puts.
 
     <img src="imgs/fig9_9.png" alt="fig9_9" style="width:70%;"/>
+
     <img src="imgs/fig9_10.png" alt="fig9_10" style="width:70%;"/>
 
 * Theta value as volatility changes:
@@ -660,6 +671,7 @@ Short put 95 (at price 2.25) position value:
     * The sensitivity of vega to a change in volatility is sometimes referred to as ***volga*** or ***vomma***.
 
     <img src="imgs/fig9_13.png" alt="fig9_13" style="width:70%;"/>
+
     <img src="imgs/fig9_14.png" alt="fig9_14" style="width:70%;"/>
 
 * Vega falls as time passes.
@@ -699,6 +711,7 @@ Short put 95 (at price 2.25) position value:
 ## Summary
 
     <img src="imgs/fig9_25.png" alt="fig9_25" style="width:70%;"/>
+
     <img src="imgs/fig9_26.png" alt="fig9_26" style="width:70%;"/>
 
 
@@ -746,6 +759,7 @@ Short put 95 (at price 2.25) position value:
     * Use a ratio straddle if calls and puts delta are not equal.
 
     <img src="imgs/fig11_1.png" alt="fig11_1" style="width:70%;"/>
+
     <img src="imgs/fig11_2.png" alt="fig11_2" style="width:70%;"/>
 
 ## Strangle
@@ -759,6 +773,7 @@ Short put 95 (at price 2.25) position value:
     * Short strangle: -gamma/+theta/-vega.
 
     <img src="imgs/fig11_3.png" alt="fig11_3" style="width:70%;"/>
+
     <img src="imgs/fig11_4.png" alt="fig11_4" style="width:70%;"/>
 
 ## Butterfly
@@ -777,6 +792,7 @@ Short put 95 (at price 2.25) position value:
     * If option is european style, both March 90/100/110 call butterfly and March 90/100/110 put butterfly trade at the same price. If not, there is a arbitrage opportunity.
 
     <img src="imgs/fig11_5.png" alt="fig11_5" style="width:70%;"/>
+
     <img src="imgs/fig11_6.png" alt="fig11_6" style="width:70%;"/>
 
 ## Condor
@@ -793,6 +809,7 @@ Short put 95 (at price 2.25) position value:
     * Short condor: +gamma/-theta/+vega.
 
     <img src="imgs/fig11_7.png" alt="fig11_7" style="width:70%;"/>
+
     <img src="imgs/fig11_8.png" alt="fig11_8" style="width:70%;"/>
 
 ## Ratio Spread
@@ -804,6 +821,7 @@ Short put 95 (at price 2.25) position value:
 * Put ratio spread: more puts are purchased than sold, prefers downward movement in the underlying contract.
 
     <img src="imgs/fig11_10.png" alt="fig11_10" style="width:70%;"/>
+
     <img src="imgs/fig11_11.png" alt="fig11_11" style="width:70%;"/>
 
 * Backspread: more options are purchased than sold.
@@ -812,6 +830,7 @@ Short put 95 (at price 2.25) position value:
     * -gamma/+theta/-vega.
 
     <img src="imgs/fig11_12.png" alt="fig11_12" style="width:70%;"/>
+
     <img src="imgs/fig11_13.png" alt="fig11_13" style="width:70%;"/>
 
 ## Calendar Spread
@@ -824,8 +843,11 @@ Short put 95 (at price 2.25) position value:
 * All options must be the same type and expire at the same time, with exercise prices most often chosen so that the entire position is delta neutral.
 
     <img src="imgs/fig11_14.png" alt="fig11_14" style="width:70%;"/>
+
     <img src="imgs/fig11_15.png" alt="fig11_15" style="width:70%;"/>
+
     <img src="imgs/fig11_16.png" alt="fig11_16" style="width:70%;"/>
+
     <img src="imgs/fig11_17.png" alt="fig11_17" style="width:70%;"/>
 
 ## Time Butterfly
@@ -837,6 +859,7 @@ Short put 95 (at price 2.25) position value:
 ## Characteristics Summary
 
 <img src="imgs/fig11_9.png" alt="fig11_9" style="width:70%;"/>
+
 <img src="imgs/fig11_18.png" alt="fig11_18" style="width:70%;"/>
 
 ## Adjustments

@@ -1,6 +1,6 @@
-+++
+<!---
 banner: assets/banner_1280.jpg
-+++
+--->
 
 # Notes
 
