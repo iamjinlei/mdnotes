@@ -1,3 +1,5 @@
+domain: unnote.xyz
+enable_sitemap: true
 entry: README.md
 assets:
   assets/robots.txt: robots.txt
