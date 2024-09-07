@@ -2,6 +2,7 @@
 nav:
     - Home=/
 left_pane: toc
+right_pane: kws
 --->
 
 <ins type=book_bib title=神奇的北魏 author=张小泱 cover=imgs/cover.jpg link=https://book.douban.com/subject/36271782/></ins>
