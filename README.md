@@ -16,6 +16,10 @@ banner: assets/banner_1280.jpg
 
 [Option Volatility and Pricing](trading/option_volatility_and_pricing/note.md)
 
+## Memo
+
+[Dev Environment Setup](memo//devenv/note.md)
+
 
 ### Note Color Systems
 * <mark name>人名 a</mark>红色
