@@ -20,6 +20,8 @@ banner: assets/banner_1280.jpg
 
 [Dev Environment Setup](memo//devenv/note.md)
 
+[Home Network Environment Setup](memo//homenetwork/note.md)
+
 
 ### Note Color Systems
 * <mark name>人名 a</mark>红色

@@ -1,7 +1,6 @@
 <!---
 nav:
     - Home=/
-left_pane: toc
 --->
 
 
