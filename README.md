@@ -14,6 +14,10 @@ banner: assets/banner_1280.jpg
 
 [博物馆](culture/博物馆/note.md)
 
+## Health
+
+[疯狂的尿酸](health/疯狂的尿酸/note.md)
+
 ## Trading
 
 [Option Volatility and Pricing](trading/option_volatility_and_pricing/note.md)
