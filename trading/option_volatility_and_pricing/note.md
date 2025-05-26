@@ -65,7 +65,7 @@ Depends on the rules of the exchange and the type of contract traded.
 Basis: the difference between the cash price and the forward price. Usually a negative number.
 
 | Instrument | Cost of Buying Now | Benefits of Buying Now |
-|-|-|-|
+| :--- | :--- | :--- |
 | Physical commodity | Interest on cash price, storage costs, insurace costs | Convenience yield |
 | Stock | Interest on stock price | Dividends, interests on dividends |
 | Bonds and notes | Interest on bond or note price | Coupon payments, interest on coupon payments |
@@ -448,7 +448,7 @@ Short put 95 (at price 2.25) position value:
 * As interest is paid more frequently, the total yield on the investment increases.
 
     | Rate of Payment | Total Yield |
-    |-|-|
+    | :--- | :--- |
     | 12% once a year | 12.00% |
     | 6% twice a year | 12.36% |
     | 3% every three months | 12.55% |
@@ -456,7 +456,7 @@ Short put 95 (at price 2.25) position value:
 * In the case of a negative interest rate, as losses are compounded more frequently, the smaller the total loss.
 
     | Rate of Payment | Total Yield |
-    |-|-|
+    | :--- | :--- |
     | -12% once a year | -12.00% |
     | -6% twice a year | -11.64% |
     | -3% every three months | -11.47% |
@@ -488,7 +488,7 @@ Short put 95 (at price 2.25) position value:
 * In a sense, the implied volatility represents the marketplace's consensusof what the future realized volatility of the underlying contract will be over the life of the option.
 
     | History | Future | Current |
-    |-|-|-|
+    | :--- | :--- | :--- |
     | Historical price | Forecast price | Current price |
     | Historical volatility | Forecast volatility | Implied volatility |
 
@@ -497,7 +497,7 @@ Short put 95 (at price 2.25) position value:
 * It is often more useful for a trader to consider an option's price in terms of implied volatility. For the example below, most traders will conclude that in theoretical terms 100 call is less expensive.
 
     | Option | Price | Implied Volatility |
-    |-|-|-|
+    | :--- | :--- | :--- |
     | 100 call | 5.40 | 27.51% |
     | 105 call | 3.60 | 28.50% |
 
@@ -527,7 +527,7 @@ Short put 95 (at price 2.25) position value:
 * Effect of changing market conditions on option values:
 
     | If... | Call values will... | Put values will... |
-    |-|-|-|
+    | :--- | :--- | :--- |
     | The price of the underlying contract rises | rise | fall |
     | The price of the underlying contract falls | fall | rise |
     | Volatility rises | rise | rise |
@@ -541,7 +541,7 @@ Short put 95 (at price 2.25) position value:
     * It may change the present value of the option.
 
     | Interest rate | Type | Forward price | Present value | Overall |
-    |-|-|-|-|-|
+    | :--- | :--- | :--- | :--- | :--- |
     | rise | call | rise | fall | rise |
     | fall | call | fall | raise | fall |
     | rise | put | fall | fall | fall |

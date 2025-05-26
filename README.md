@@ -16,6 +16,8 @@ banner: assets/banner_1280.jpg
 
 ## Health
 
+[饮食安排](health/饮食安排/note.md)
+
 [疯狂的尿酸](health/疯狂的尿酸/note.md)
 
 ## Trading
