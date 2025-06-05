@@ -22,6 +22,8 @@ banner: assets/banner_1280.jpg
 
 ## Trading
 
+[Statistics](trading/statistics/note.md)
+
 [Option Volatility and Pricing](trading/option_volatility_and_pricing/note.md)
 
 ## Memo
