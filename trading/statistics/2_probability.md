@@ -40,12 +40,12 @@ Eᵢ means event i.
 | Marginal | p(A)=∑p(A∩Eᵢ)=∑p(Eᵢ)p(A\|Eᵢ) | - | - |
 | Bayes' Rule (conditional probability) | p(Eᵢ\|A)=p(Eᵢ∩A)E/p(A)=p(Eᵢ)p(A\|Eᵢ)/∑p(Eⱼ)p(A\|Eⱼ) | - | - |
 
-### Marginal
+### Marginal Rule Explanation
 
 <mark hl>Marginal probability</mark> is the probability of some event happening, no matter what happens to other variables.
 It is the overall (total) probability of one variable, averaging over other possibilities.
 
-### Bayes' Rule
+### Bayes' Rule Explanation
 
 <mark hl>Another way of understanding Bayes' rule:</mark>
 
@@ -155,16 +155,39 @@ There is one **conditional probability** p(Track|Football) = 0.50.
 
 There is one **additive probability**: p(Football∪Track) = 0.13.
 
+#### Example 4
 
----
+A new, less expensive method has been developed for testing for the AIDS virus.
+50% people who test positive have AIDS.
+5% those who test negative have AIDS.
+20% of the population tests positive.
 
-∑
-∩
-∪
-n₁
-n₂
-n₃
-nₖ
-p(Eᵢ)
-p(Eⱼ)
+- What percentage of the population will receive false positive scores - that is, the
+test will say they have AIDS when they really don't?
 
+    ```
+Joint rule
+p(no AIDS∩positive) = p(no AIDS|positive) x p(positive) = (1 - 50%) x 20% = 10%
+    ```
+
+- What percentage of the population will receive false negative scores - that is, the
+test will say they don't have AIDS when they really do?
+
+    ```
+Joint rule
+p(AIDS∩negative) = p(AIDS|negative) x p(negative) = 5% x 80% = 4%
+    ```
+
+- What percentage of the population has AIDS?
+
+    ```
+Marginal rule
+p(AIDS) = p(no AIDS∩positive) + p(AIDS∩negative) = 14%
+    ```
+
+- What is the probability that someone who has AIDS will test positive?
+
+    ```
+Bayes' rule
+p(positive|AIDS) = p(AIDS|positive) x p(positive) / p(AIDS) = 50% x 20% / 14% = 5/7
+    ```

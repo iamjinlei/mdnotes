@@ -5,7 +5,7 @@ nav:
 left_pane: toc
 --->
 
-# 3 Distributions
+# 4 Distributions
 
 ## Normal Distribution
 
