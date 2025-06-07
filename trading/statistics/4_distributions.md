@@ -42,7 +42,7 @@ Denoted by **Probability Density Function (PDF)**.
     - p(a ≤ X ≤ b) = 𝐹(b) - 𝐹(a)
 
 
-## Binomial Distribution
+## The Binomial Distribution
 
 ### Bernoulli Trial
 
@@ -100,7 +100,7 @@ V(xᵢ) = E(xᵢ²) - E(xᵢ)² = p - p² = p(1 - p)
 V(X) = V(X₁) + V(X₂) ... + V(Xɴ) = np(1 - p)
 ```
 
-### Shape of the Binomial Distribution
+### Shape
 
 - For small p and small N, the binomial distribution is what we call skewed right.
 That is, the bulk of the probability falls in the smaller numbers, and the distribution tails off to the right.
@@ -122,7 +122,7 @@ That is, the distribution is without skewness.
 <img style="width:45%;display:block;margin:auto;" loading="lazy" src="imgs/4_binomial_dist_shape_ln.png" alt="binomial_dist_shape_large_n">
 
 
-### Binomial Examples
+### Examples
 
 ```
 In a family of 11 children, what is the probability that there will be more boys than girls?
