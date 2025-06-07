@@ -31,7 +31,7 @@ E(X) = Σxᵢp(xᵢ) = µₓ
 - Continuous variable: for a continuous variable X ranging over all the real numbers, the expectation is defined by integration.
 
     ```
-E(X) = ∫x𝑓(x)dx = µₓ
+E(X) = ∫x𝑓(x)𝑑x = µₓ
     ```
 
 ## Variance

@@ -30,7 +30,10 @@ nav:
     - [Exercises](3_expectations.md#Exercises)
 - [Summary](3_expectations.md#Summary)
 
-## 4 [Distributions](4_distributions.md)
+## 4 [Probability Distributions](4_distributions.md)
+- [Random Variables](4_distributions.md#Random Variables)
+    - [Discrete Random Variables](4_distributions.md#Discrete Random Variables)
+    - [Continuous Random Variables](4_distributions.md#Continuous Random Variables)
 
 
 
