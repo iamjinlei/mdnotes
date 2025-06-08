@@ -15,9 +15,9 @@ nav:
 ## 2 [Probability](2_probability.md)
 - [Axioms](2_probability.md#2 Probability_Axioms)
 - [Probability Rules](2_probability.md#2 Probability_Probability Rules)
-    - [Marginal Rule Explanation](2_probability.md#2 Probability_Marginal Rule Explanation)
-    - [Bayes’ Rule Explanation](2_probability.md#2 Probability_Bayes Rule Explanation)
-    - [Examples](2_probability.md#2 Probability_Examples)
+    - [Marginal Rule Explanation](2_probability.md#Probability Rules_Marginal Rule Explanation)
+    - [Bayes’ Rule Explanation](2_probability.md#Probability Rules_Bayes Rule Explanation)
+    - [Examples](2_probability.md#Probability Rules_Examples)
 
 ## 3 [Expectations](3_expectations.md)
 - [Mean](3_expectations.md#3 Expectations_Mean)
@@ -34,17 +34,27 @@ nav:
 - [Random Variables](4_distributions.md#4 Probability Distributions_Random Variables)
     - [Discrete Random Variables](4_distributions.md#Random Variables_Discrete Random Variables)
     - [Continuous Random Variables](4_distributions.md#Random Variables_Continuous Random Variables)
+- [Permutations and Combinations](4_distributions.md#4 Probability Distributions_Permutations and Combinations)
+    - [Permutations](4_distributions.md#Permutations and Combinations_Permutations)
+    - [Combinations](4_distributions.md#Permutations and Combinations_Combinations)
 - [The Binomial Distribution](4_distributions.md#4 Probability Distributions_The Binomial Distribution)
     - [Bernoulli Trial](4_distributions.md#The Binomial Distribution_Bernoulli Trial)
     - [Binomial Distribution](4_distributions.md#The Binomial Distribution_Binomial Distribution)
     - [Mean and Variance](4_distributions.md#The Binomial Distribution_Mean and Variance)
     - [Shape](4_distributions.md#The Binomial Distribution_Shape)
     - [Examples](4_distributions.md#The Binomial Distribution_Examples)
+- [The Normal Distribution](4_distributions.md#4 Probability Distributions_The Normal Distribution)
+    - [Properties](4_distributions.md#The Normal Distribution_Properties)
+    - [Applications](4_distributions.md#The Normal Distribution_Applications)
+    - [Rules](4_distributions.md#The Normal Distribution_Rules)
+    - [Examples](4_distributions.md#The Normal Distribution_Examples 1)
+    - [Approximation to the Binomial Distribution](4_distributions.md#The Normal Distribution_Approximation to the Binomial Distribution)
 
-
+Approximation to the Binomial Distribution
 ---
 
 Credits go to:
 
 1. [ChatGPT](https://chatgpt.com/)
 2. [Sociology Graduate Statistics | University of Notre Dame](https://www3.nd.edu/~rwilliam/stats1/)
+3. [STAT 414 Introduction to Probability Theory | Penn State](https://online.stat.psu.edu/stat414/lesson/10/10.4)

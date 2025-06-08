@@ -14,9 +14,7 @@ It tells you where the center of your data is.
 
 For n numbers: x₁, x₂, ..., xₙ, the mean μ is:
 
-```
-μ = (1/n) * Σxᵢ
-```
+    μ = (1/n) * Σxᵢ
 
 ## Expected Value
 
@@ -24,15 +22,11 @@ The expected value of a random variable is the arithmetic mean of that variable,
 
 - Discrete variable: the expected value of a discrete random variable, X, is found by multiplying each X value by its probability and then summing over all values of the random variable.
 
-    ```
-E(X) = Σxᵢp(xᵢ) = µₓ
-    ```
+        E(X) = Σxᵢp(xᵢ) = µₓ
 
 - Continuous variable: for a continuous variable X ranging over all the real numbers, the expectation is defined by integration.
 
-    ```
-E(X) = ∫x𝑓(x)𝑑x = µₓ
-    ```
+        E(X) = ∫x𝑓(x)𝑑x = µₓ
 
 ## Variance
 
@@ -43,24 +37,18 @@ The variance tells you how **spread out** the data is — how far from the mean 
 
 The variance of a random variable X is defined as the expected squared deviation of the values of this random variable about their mean.
 
-```
-V(X) = E((X - μ)²) = E(X²) - μ²
-```
+    V(X) = E((X - μ)²) = E(X²) - μ²
 
 In the discrete case, this is equivalent to:
 
-```
-V(X) =  Σ(xᵢ-μ)²p(xᵢ)
-```
+    V(X) =  Σ(xᵢ-μ)²p(xᵢ)
 
 ## Standard Deviation
 
 The standard deviation is just the **square root of variance**.
 It is in the **same units** as the original data, easier to interpret.
 
-```
-StdDev(X) = sqrt(Variance) = σₓ
-```
+    StdDev(X) = sqrt(Variance) = σₓ
 
 ## Covariance
 
@@ -72,9 +60,7 @@ Covariance measures how **two variables move together**.
 
 For two variables X and Y:
 
-```
-Cov(X, Y) = E((xᵢ - E(X)) * (yᵢ - E(Y)))
-```
+    Cov(X, Y) = E((xᵢ - E(X)) * (yᵢ - E(Y)))
 
 Intuition:
 
@@ -90,9 +76,7 @@ Correlation is a **scaled version of covariance**, it removes the units and norm
 - -1: perfect negative linear relationship
 - 0: no linear relationship
 
-```
-Corr(X, Y) = Cov(X, Y) / (StdDev(X) * StdDev(Y))
-```
+    Corr(X, Y) = Cov(X, Y) / (StdDev(X) * StdDev(Y))
 
 ## Autocorrelation
 
@@ -104,9 +88,7 @@ In simple terms, does today's value depend on past values? If yes, autocorrelati
 
 For time series Xₜ, lag k:
 
-```
-Autocorrelation at lag k = Corr(Xₜ, Xₜ₋ₖ)
-```
+    Autocorrelation at lag k = Corr(Xₜ, Xₜ₋ₖ)
 
 Interpretation
 
@@ -152,58 +134,54 @@ Assume following, *a* and *b* are any given constants.
 
 ### Exercises
 
-Exercise 1:
-```
-Prove V(X) = E((X - μ)²) = E(X²) - μ²
+#### Exercise 1
 
-Solution:
-V(X) = E((X - μ)²)
-     = E(X² - 2Xμ + μ²)           [expand]
-     = E(X²) - E(2Xμ) + E(μ²)     [Rule#7]
-     = E(X²) - 2μE(X) + μ²        [Rule#7]
-     = E(X²) - 2μ² + μ²
-     = E(X²) - μ²
-```
+    Prove V(X) = E((X - μ)²) = E(X²) - μ²
 
-Exercise 2
-```
-Prove V(aX) = a² * V(X)
+    Solution:
+    V(X) = E((X - μ)²)
+         = E(X² - 2Xμ + μ²)           [expand]
+         = E(X²) - E(2Xμ) + E(μ²)     [Rule#7]
+         = E(X²) - 2μE(X) + μ²        [Rule#7]
+         = E(X²) - 2μ² + μ²
+         = E(X²) - μ²
 
-Solution:
-Let Y = aX
-V(Y) = E(Y²) - E(Y)²              [Rule#10]
-     = E(a²X²) - E(aX)²
-     = a²E(X²) - a²E(X)²          [Rule#4]
-     = a²(E(X²) - E(X)²)
-     = a²V(X)
-```
+#### Exercise 2
 
-Exercise 3
-```
-Let Z = (X - µₓ)/σₓ, find E(Z) and V(Z)
+    Prove V(aX) = a² * V(X)
 
-Solution:
-E(Z) = E((X - µₓ) / σₓ)
-     = (E(X) - µₓ) / σₓ           [Rule#7,Rule#3]
-     = 0
-V(Z) = V((X - µₓ) / σₓ)           [Rule#13]
-     = V(X) / σₓ²                 [Rule#12]
-     = 1
-```
+    Solution:
+    Let Y = aX
+    V(Y) = E(Y²) - E(Y)²              [Rule#10]
+         = E(a²X²) - E(aX)²
+         = a²E(X²) - a²E(X)²          [Rule#4]
+         = a²(E(X²) - E(X)²)
+         = a²V(X)
 
-Exercise 4
-```
-Finding the mean and variance for the number of heads obtained in 3 coin tosses.
+#### Exercise 3
 
-Solution:
-Let Xᵢ = 1 if the ith coin toss comes up heads, 0 otherwise.
-So Xᵢ² = Xᵢ (0² = 0, 1² = 1).
+    Let Z = (X - µₓ)/σₓ, find E(Z) and V(Z)
 
-E(X₁) = E(X₂) = E(X₃) = 0.5
-E(X₁ + X₂ + X₃) = E(X₁) + E(X₂) + E(X₃) = 1.5                [Rule#8]
-V(X₁) = V(X₂) = V(X₃) = E(X²) - E(X)² = 0.5 - 0.25 = 0.25    [Rule#10]
-V(X₁ + X₂ + X₃) = V(X₁) + V(X₂) + V(X₃) = 0.75               [Rule#15]
-```
+    Solution:
+    E(Z) = E((X - µₓ) / σₓ)
+         = (E(X) - µₓ) / σₓ           [Rule#7,Rule#3]
+         = 0
+    V(Z) = V((X - µₓ) / σₓ)           [Rule#13]
+         = V(X) / σₓ²                 [Rule#12]
+         = 1
+
+#### Exercise 4
+
+    Finding the mean and variance for the number of heads obtained in 3 coin tosses.
+
+    Solution:
+    Let Xᵢ = 1 if the ith coin toss comes up heads, 0 otherwise.
+    So Xᵢ² = Xᵢ (0² = 0, 1² = 1).
+
+    E(X₁) = E(X₂) = E(X₃) = 0.5
+    E(X₁ + X₂ + X₃) = E(X₁) + E(X₂) + E(X₃) = 1.5                [Rule#8]
+    V(X₁) = V(X₂) = V(X₃) = E(X²) - E(X)² = 0.5 - 0.25 = 0.25    [Rule#10]
+    V(X₁ + X₂ + X₃) = V(X₁) + V(X₂) + V(X₃) = 0.75               [Rule#15]
 
 ## Summary
 

@@ -26,9 +26,9 @@ Often written simply as p(x).
 It is specifically defined for discrete random variables.
     - same as p(X = x)
     - 0 ≤ p(X = x) ≤ 1
-    - Σ p(X = x) = 1
+    - Σp(X = x) = 1
 - **Cumulative Distribution Function (CDF)** describes probability that a random variable X takes on a value less than or equal to some particular value a is often written as:
-<img style="width:32%;display:block;margin:auto;" loading="lazy" src="imgs/4_cdf_discrete.png" alt="cdf_discrete">
+    <img style="width:32%;display:block;margin:auto;" loading="lazy" src="imgs/4_cdf_discrete.png" alt="cdf_discrete">
 
 ### Continuous Random Variables
 - In general, for continuous random variables, the occurrence of any exact value of X may be regarded as having 0 probability.
@@ -36,10 +36,49 @@ For this reason, one discuss the probability that X takes on some value a, the s
 Denoted by **Probability Density Function (PDF)**.
     - 𝑓(a) = probability density of X at a
 - The **Cumulative Distribution Function (CDF)** is written as:
-<img style="width:55%;display:block;margin:auto;" loading="lazy" src="imgs/4_cdf_continuous.png" alt="cdf_continuous">
+    <img style="width:55%;display:block;margin:auto;" loading="lazy" src="imgs/4_cdf_continuous.png" alt="cdf_continuous">
 - The probability a continous random variable takes on any value between a and b:
     - p(a ≤ X ≤ b) = ∫𝑓(x)𝑑x for a ≤ x ≤ b
     - p(a ≤ X ≤ b) = 𝐹(b) - 𝐹(a)
+
+## Permutations and Combinations
+
+### Permutations
+
+Permutation is an arrangement of objects in order.
+
+    Total number of permutations of N objects = N! (N factorial)
+
+    Where
+
+    N! = 1 * 2 * 3 *...* (N-1) * N
+    0! = 1
+
+If some of the N objects are similar, such as N₁ objects are alike, N₂ objects are alike ... Nₖ objects are alike, and ΣNᵢ = N.
+
+    The total number of permutations of these N objects = N! / (N₁!N₂!...Nₖ!)
+
+If only r objects can be taken in each permutation.
+
+    The total number of permutations of r objects of N objects = N! / (N - r)!
+
+    Its notion is ɴPᵣ, where ɴPɴ is full permutation, i.e. N!
+
+### Combinations
+
+Combination represents number of ways of selecting r objects from N objects, irrespective of order.
+In contrast, **ɴPᵣ** selects r objects from N objects and the order matters.
+
+    The total number of combinations of r distinct of N objects = ɴPᵣ / ᵣPᵣ
+                                                                = N! / (r!(N-r)!)
+
+    Its notion is ɴCᵣ reads as N choose r.
+
+Sometimes the number of combinations is known as a **binomial coefficient**, and sometimes the notation ɴCᵣ is used.
+
+Combination is also often represented using following notion:
+
+<img style="width:25%;display:block;margin:auto;" loading="lazy" src="imgs/4_combination_notion.png" alt="combination_notion">
 
 
 ## The Binomial Distribution
@@ -70,12 +109,8 @@ A binomial distribution gives us the probabilities associated with independent, 
 
 The probability of getting r successes in N independent trials with each having p success probability:
 
-```
-p(X = r; N, p) = number of ways event can occur * p(one occurrence)
-               =  ɴCᵣ * pʳ * (1 - p)⁽ᴺ⁻ʳ⁾
-
-ɴCᵣ reads as N choose r.
-```
+    p(X = r; N, p) = number of ways event can occur * p(one occurrence)
+                   = ɴCᵣ * pʳ * (1 - p)⁽ᴺ⁻ʳ⁾
 
 More formally, in sampling a **stationary** Bernoulli process, with the probability of success equal to p, the probability of observing exactly r successes in N independent trials is:
 
@@ -89,96 +124,94 @@ Another way of defining binomial distribution:
 
 ### Mean and Variance
 
-```
-Mean:
-E(Xᵢ) = Σxᵢp(xᵢ) = 0 * (1 - p) + 1 * p = p
-E(X) = E(X₁ + X₂ ... + Xɴ) = E(X₁) + E(X₂) + ...+ E(Xɴ) = Np
+    Mean:
+    E(Xᵢ) = Σxᵢp(xᵢ)
+          = 0 * (1 - p) + 1 * p
+          = p
+    E(X) = E(X₁ + X₂ ... + Xɴ)
+         = E(X₁) + E(X₂) + ...+ E(Xɴ)
+         = Np
 
-Variance:
-xᵢ = xᵢ²
-V(xᵢ) = E(xᵢ²) - E(xᵢ)² = p - p² = p(1 - p)
-V(X) = V(X₁) + V(X₂) ... + V(Xɴ) = np(1 - p)
-```
+    Variance:
+    xᵢ = xᵢ²
+    V(xᵢ) = E(xᵢ²) - E(xᵢ)²
+          = p - p²
+          = p(1 - p)
+          = pq
+    V(X) = V(X₁) + V(X₂) ... + V(Xɴ)
+         = Npq
 
 ### Shape
 
 - For small p and small N, the binomial distribution is what we call skewed right.
 That is, the bulk of the probability falls in the smaller numbers, and the distribution tails off to the right.
 
-<img style="width:45%;display:block;margin:auto;" loading="lazy" src="imgs/4_binomial_dist_shape_sp_sn.png" alt="binomial_dist_shape_small_p_small_n">
+    <img style="width:45%;display:block;margin:auto;" loading="lazy" src="imgs/4_binomial_dist_shape_sp_sn.png" alt="binomial_dist_shape_small_p_small_n">
 
 - For large p and small N, the binomial distribution is what we call skewed left.
 That is, the bulk of the probability falls in the larger numbers and the distribution tails off to the left.
 
-<img style="width:45%;display:block;margin:auto;" loading="lazy" src="imgs/4_binomial_dist_shape_lp_sn.png" alt="binomial_dist_shape_large_p_small_n">
+    <img style="width:45%;display:block;margin:auto;" loading="lazy" src="imgs/4_binomial_dist_shape_lp_sn.png" alt="binomial_dist_shape_large_p_small_n">
 
 - For p = 0.5 and large and small N, the binomial distribution is what we call symmetric.
 That is, the distribution is without skewness.
 
-<img style="width:45%;display:block;margin:auto;" loading="lazy" src="imgs/4_binomial_dist_shape_p50.png" alt="binomial_dist_shape_large_p50">
+    <img style="width:45%;display:block;margin:auto;" loading="lazy" src="imgs/4_binomial_dist_shape_p50.png" alt="binomial_dist_shape_large_p50">
 
 - When p ≠ 0.5, when N becomes large, the binomial distribution approaches symmetry.
 
-<img style="width:45%;display:block;margin:auto;" loading="lazy" src="imgs/4_binomial_dist_shape_ln.png" alt="binomial_dist_shape_large_n">
+    <img style="width:45%;display:block;margin:auto;" loading="lazy" src="imgs/4_binomial_dist_shape_ln.png" alt="binomial_dist_shape_large_n">
 
 
 ### Examples
 
-```
-In a family of 11 children, what is the probability that there will be more boys than girls?
-Solve this problem WITHOUT using the complements rule.
+    In a family of 11 children, what is the probability that there will be more boys than girls?
+    Solve this problem WITHOUT using the complements rule.
 
-Solution:
-p(boy) = 0.5
-N = 11
-p(more boys than girls) = p(6, N, p(boy)) + p(7, N, p(boy)) ... + p(11, N, p(boy))
-                        = 0.2256 + 0.1611 + 0.0806 + 0.0269 + 0.0054 + 0.0005
-                        = 0.5
-```
+    Solution:
+    p(boy) = 0.5
+    N = 11
+    p(more boys than girls) = p(6, N, p(boy)) + p(7, N, p(boy)) ... + p(11, N, p(boy))
+                            = 0.2256 + 0.1611 + 0.0806 + 0.0269 + 0.0054 + 0.0005
+                            = 0.5
 
 
-## Normal Distribution
+## The Normal Distribution
 
-Characteristics of the normal distribution:
+### Properties
 
 - Symmetric, bell shaped.
 It describes data that clusters around a mean with symmetric spread.
-- Continuous for all values of X between -∞ and ∞ so that each conceivable interval of real numbers has a probability other than zero.
+- Continuous for all values of X between -∞ and ∞ so that each conceivable interval of real numbers has a probability greater than 0.
 - -∞ ≤ X ≤ ∞
-- Two parameters, µ and σ. Note that the normal distribution is actually a family of
-distributions, since µ and σ determine the shape of the distribution.
+- Two parameters, µ and σ. <mark hl>Note that the normal distribution is actually a family of distributions, since µ and σ determine the shape of the distribution.</mark>
     - Mean (μ): controls the center
     - Standard deviation (σ): controls the spread
+- Probability density function:
 
-<img style="width:50%;display:block;margin:auto;" loading="lazy" src="imgs/4_normal_dist_pdf.png" alt="normal_dist_pdf">
-
+    <img style="width:35%;display:block;margin:auto;" loading="lazy" src="imgs/4_normal_dist_pdf.png" alt="normal_dist_pdf">
 
 - The notation N(µ, σ²) means normally distributed with mean µ and variance σ².
-If we say X ∼ N(µ, σ²), we mean that X is distributed N(µ, σ²).
+If we say X ~ N(µ, σ²), we mean that X is distributed N(µ, σ²).
 - About 2/3 of cases fall within 1 standard deviation of the mean, that is:
-    ```
-P(µ - σ ≤ X ≤ µ + σ) = 0.6826
-    ```
+
+        p(µ - σ ≤ X ≤ µ + σ) = 0.6826
 
 - About 95% of cases fall within 2 standard deviations of the mean, that is
-    ```
-P(µ - 2σ ≤ X ≤ µ + 2σ) = 0.9544
-    ```
 
-<img style="width:60%;display:block;margin:auto;" loading="lazy" src="imgs/4_normal_dist_curve.png" alt="normal_dist_curve">
+        p(µ - 2σ ≤ X ≤ µ + 2σ) = 0.9544
+
+    <img style="width:60%;display:block;margin:auto;" loading="lazy" src="imgs/4_normal_dist_curve.png" alt="normal_dist_curve">
+
+
+### Applications
 
 - Many things actually are normally distributed, or very close to it.
 For example, height and intelligence are approximately normally distributed; measurement errors also often have a normal distribution.
 - The normal distribution is easy to work with mathematically.
 In many practical cases, the methods developed using normal theory work quite well even when the distribution is not normal.
 - There is a very strong connection between the size of a sample N and the extent to which a sampling distribution approaches the normal form.
-Many sampling distributions based on large N can be approximated by the normal distribution even though the population distribution itself is definitely not normal.
-
-
-Examples:
-
-- Heights of people
-- Daily returns of large-cap stocks (often modeled as normal for simplicity)
+**Many sampling distributions based on large N can be approximated by the normal distribution even though the population distribution itself is definitely not normal**.
 
 Usage in time series:
 
@@ -187,34 +220,98 @@ Even though crypto returns are not perfectly normal, log returns of large assets
 - Confidence intervals: if residuals are normal, we can compute forecast intervals: mean ± 1.96 x σ for 95% CI.
 - Risk models: value-at-Risk (VaR) often assumes normal returns (or uses a fat-tailed correction).
 
+### Rules
 
-### Binomial Distribution
+- Working with **PDF** is tedious.
+The trick is to convert arbitrary normal distribution with µ and σ into a standardized normal distribution N(0, 1), i.e. µ = 0 and σ = 1.
+    - If X ~ N(µ, σ²), then Z = (X - µ) / σ ~ N(0, 1)
+    - There is precomputed probability lookup table for N(0, 1).
+    - Convert back to X = Zσ + µ
+- N(0, 1) Lookup table and how it works can be found [here](https://en.wikipedia.org/wiki/Standard_normal_table#Reading_a_Z_table)
+- Define CDF as 𝐹(x) = p(X ≤ x):
+    - Rule #1
 
-The binomial distribution models the number of successes in a fixed number of independent yes/no (Bernoulli) trials.
+            p(Z ≤ a) = 𝐹(a)         when a is positive
+                     = 1 - 𝐹(-a)    when a is negative
 
-Parameters:
-- n: number of trials
-- p: probability of success in each trial
+            Due to the symmetry of the curve, when 𝐹(a) > 0.5, a > 0, and
+                                              when 𝐹(a) < 0.5, a < 0.
 
-Formula:
-```
-P(k successes in n trials) = C(n, k) * p^k * (1-p)^(n-k)
-```
+        <img style="width:60%;display:block;margin:auto;" loading="lazy" src="imgs/4_normal_dist_rule1.png" alt="normal_dist_rule1">
 
-Examples:
-- Number of times a coin lands heads in 10 flips
-- Number of profitable trades in a batch of 100 trades
+    - Rule #2
 
+            p(Z ≥ a) = 1 - 𝐹(a)    when a is positive
+                     = 𝐹(-a)       when a is negative
 
+        <img style="width:60%;display:block;margin:auto;" loading="lazy" src="imgs/4_normal_dist_rule2.png" alt="normal_dist_rule2">
 
+    - Rule #3
 
+            p(a ≤ Z ≤ b) = 𝐹(b) - 𝐹(a)
 
+        <img style="width:60%;display:block;margin:auto;" loading="lazy" src="imgs/4_normal_dist_rule3.png" alt="normal_dist_rule3">
 
+    - Rule #4
 
+            Assume a positive a:
+            p(-a ≤ Z ≤ a) = 𝐹(a) - 𝐹(-a)
+                          = 𝐹(a) - (1 - 𝐹(a))
+                          = 2𝐹(a) - 1
 
+### Examples
 
+Below are some examples of how to use standardized scores to address various questions.
 
+#### Example 1
 
+    The top 5% of applicants (as measured by GRE scores) will receive scholarships.
+    If GRE ~ N(500, 100²), what is the GRE score to qualify for a scholarship?
+
+    Solution:
+    Let X = GRE, want to find x such that p(X ≥ x) = 0.05
+    Let Z = (X - 500) / 100 ~ N(0, 1)
+    For p(Z ≥ z) = 0.05, z ≈ 1.65
+    x = (z * 100) + 500 = 665
+
+#### Example 2
+
+    Family income ~ N(25000, 10000²).
+    If the poverty level is $10,000, what percentage of the population lives in poverty?
+
+    Solution:
+    Let X = family income, want to find p(X ≤ 10000).
+    Let Z = (X - 25000) / 10000 ~ N(0, 1)
+    z = (10000 - 25000) / 10000 = -1.5
+    p(Z ≤ -1.5) = 1 - p(Z ≤ 1.5)
+                = 1 - 0.9332
+                = 0.0668
+### Example 3
+
+    A new tax law is expected to benefit “middle income” families, those with incomes between
+    $20,000 and $30,000. If Family income ~ N(25000, 10000²), what percentage of the population
+    will benefit from the law?
+
+    Solution:
+    Let X = family income, want to find p(20000 ≤ X ≤ 30000)
+    Let Z = (X - 25000) / 10000 ~ N(0, 1)
+    z₀ = (20000 - 25000) / 10000 = -0.5
+    z₁ = (30000 - 25000) / 10000 = 0.5
+    p(20000 ≤ X ≤ 30000) = p(-0.5 ≤ Z ≤ 0.5)
+                         = 2𝐹(0.5) - 1
+                         = 1.383 - 1
+                         = 0.383
+
+### Approximation to the Binomial Distribution
+
+<mark hl>For a large enough N, a binomial variable X is approximately ~N(Np, Npq)</mark>.
+The normal distribution can be used to approximate the binomial distribution.
+- How large N needs to be depends on how close p is to 0.5.
+    - Fairly good results are usually obtained when Np(1-p) ≥ 3.
+- Binomial is discrete: p(X ≤ a) + p(X ≥ a +1) = 1 when a ≤ X ≤ a + 1 is missed from the continuous space.
+    - Use continuity correction for approximation
+        - p(X ≤ a + 0.5) for p(X ≤ a)
+        - p(X ≥ a + 0.5) for p(X ≥ a + 1)
 
 
 ## 3. Poisson Distribution
@@ -225,13 +322,37 @@ Parameter:
 - lambda (λ): average rate of events per interval
 
 Formula:
-```
-P(k events) = (λ^k * e^-λ) / k!
-```
 
-Examples:
-- Number of trades per second on an exchange
-- Number of server requests per minute
+    P(k events) = (λ^k * e^-λ) / k!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 

@@ -49,10 +49,8 @@ It is the overall (total) probability of one variable, averaging over other poss
 
 <mark hl>Another way of understanding Bayes' rule:</mark>
 
-```
-Joint rule:  p(A∩B) = p(B)p(A|B) = p(A)p(B|A)
-Transformed: p(A|B) = p(A)p(B|A) / p(B)
-```
+    Joint rule:  p(A∩B) = p(B)p(A|B) = p(A)p(B|A)
+    Transformed: p(A|B) = p(A)p(B|A) / p(B)
 
 - p(A): initial belief about A, called the **Prior**.
 - p(B|A): how likely you would see B if A were true, called the **Likelihood**.
@@ -63,32 +61,30 @@ The rule reads as: Posterior = (Prior x Likelihood) / Evidence
 
 Medical test example:
 
-```
-Let’s say a rare disease affects 1 in 1000 people.
-You take a test that is 99% accurate (both for positive and negative results).
-You get a positive test.
-What is the chance you actually have the disease?
+    Let’s say a rare disease affects 1 in 1000 people.
+    You take a test that is 99% accurate (both for positive and negative results).
+    You get a positive test.
+    What is the chance you actually have the disease?
 
-Setup:
+    Setup:
 
-p(Disease) = 0.001 (prior)
-p(No Disease) = 0.999
-p(Positive|Disease) = 0.99 (likelihood)
-p(Negative|No Disease) = 0.99
-p(Positive|No Disease) = 0.01 (false positive)
+    p(Disease) = 0.001 (prior)
+    p(No Disease) = 0.999
+    p(Positive|Disease) = 0.99 (likelihood)
+    p(Negative|No Disease) = 0.99
+    p(Positive|No Disease) = 0.01 (false positive)
 
-p(Disease|Positive) = p(Disease) x p(Positive|Disease) / p(Positive)
+    p(Disease|Positive) = p(Disease) x p(Positive|Disease) / p(Positive)
 
-Where:
+    Where:
 
-p(Positive) = p(Positive|Disease) x p(Disease) + p(Positive|No Disease) x p(No Disease)
-            = (0.99 × 0.001) + (0.01 × 0.999)
-            = 0.01098
+    p(Positive) = p(Positive|Disease) x p(Disease) + p(Positive|No Disease) x p(No Disease)
+                = (0.99 × 0.001) + (0.01 × 0.999)
+                = 0.01098
 
-Finally:
+    Finally:
 
-p(Disease|Positive) ≈ 0.0901 = 9.01%
-```
+    p(Disease|Positive) ≈ 0.0901 = 9.01%
 
 Bayes’ rule is about reasoning in reverse.
 You know how likely the test is to be positive if the person has the disease (test accuracy).
@@ -165,29 +161,21 @@ A new, less expensive method has been developed for testing for the AIDS virus.
 - What percentage of the population will receive false positive scores - that is, the
 test will say they have AIDS when they really don't?
 
-    ```
-Joint rule
-p(no AIDS∩positive) = p(no AIDS|positive) x p(positive) = (1 - 50%) x 20% = 10%
-    ```
+        Joint rule
+        p(no AIDS∩positive) = p(no AIDS|positive) x p(positive) = (1 - 50%) x 20% = 10%
 
 - What percentage of the population will receive false negative scores - that is, the
 test will say they don't have AIDS when they really do?
 
-    ```
-Joint rule
-p(AIDS∩negative) = p(AIDS|negative) x p(negative) = 5% x 80% = 4%
-    ```
+        Joint rule
+        p(AIDS∩negative) = p(AIDS|negative) x p(negative) = 5% x 80% = 4%
 
 - What percentage of the population has AIDS?
 
-    ```
-Marginal rule
-p(AIDS) = p(no AIDS∩positive) + p(AIDS∩negative) = 14%
-    ```
+        Marginal rule
+        p(AIDS) = p(no AIDS∩positive) + p(AIDS∩negative) = 14%
 
 - What is the probability that someone who has AIDS will test positive?
 
-    ```
-Bayes' rule
-p(positive|AIDS) = p(AIDS|positive) x p(positive) / p(AIDS) = 50% x 20% / 14% = 5/7
-    ```
+        Bayes' rule
+        p(positive|AIDS) = p(AIDS|positive) x p(positive) / p(AIDS) = 50% x 20% / 14% = 5/7
