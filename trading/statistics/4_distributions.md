@@ -187,7 +187,7 @@ It describes data that clusters around a mean with symmetric spread.
 - Two parameters, µ and σ. <mark hl>Note that the normal distribution is actually a family of distributions, since µ and σ determine the shape of the distribution.</mark>
     - Mean (μ): controls the center
     - Standard deviation (σ): controls the spread
-- Probability density function:
+- Probability density function (PDF):
 
     <img style="width:35%;display:block;margin:auto;" loading="lazy" src="imgs/4_normal_dist_pdf.png" alt="normal_dist_pdf">
 
@@ -302,7 +302,7 @@ Below are some examples of how to use standardized scores to address various que
                          = 1.383 - 1
                          = 0.383
 
-### Approximation to the Binomial Distribution
+### Approximating the Binomial Distribution
 
 <mark hl>For a large enough N, a binomial variable X is approximately ~N(Np, Npq)</mark>.
 The normal distribution can be used to approximate the binomial distribution.
@@ -314,16 +314,81 @@ The normal distribution can be used to approximate the binomial distribution.
         - p(X ≥ a + 0.5) for p(X ≥ a + 1)
 
 
-## 3. Poisson Distribution
+## The Poisson Distribution
 
-What is it: The Poisson distribution models the number of times an event happens in a fixed interval of time or space when events occur independently at a constant average rate.
+The Poisson distribution models the number of times an event happens in a fixed interval of time or space when events occur independently at a constant average rate.
+Examples of Poisson random variable:
+- The number of typos on a printed page
+- The number of cars passing through the intersection of Allen Street and College Avenue in one minute
+- The number of customers at an ATM in 10-minute intervals
 
-Parameter:
-- lambda (λ): average rate of events per interval
+### Properties
 
-Formula:
+- If X is a Poisson random variable, then the probability mass function (PMF) is:
 
-    P(k events) = (λ^k * e^-λ) / k!
+    <img style="width:22%;display:block;margin:auto;" loading="lazy" src="imgs/4_poisson_dist_pmf.png" alt="poisson_dist_pmf">
+
+    - x = 0, 1, 2, ...
+    - λ is the average rate of event occurrence per interval.
+    - e ≈ 2.71828
+
+- Verify ∑𝑓(x) = 1
+
+    Taylor series for eˣ = ∑xᵏ/k! for k = 0, 1, 2, ...
+    Now ∑𝑓(x) = ∑(e^-λ * λᵏ / k!)
+              = e^-λ * ∑(λᵏ / k!)
+              = e^-λ * e^λ
+              = 1
+
+- Mean and variance of a Poisson random variable are both λ.
+
+- There are theoretically an infinite number of possible Poisson distributions.
+Any specific Poisson distribution depends on the parameter λ.
+
+- Let X denote the number of events in a given continuous interval.
+It follows an approximate Poisson process with parameter λ > 0 if:
+    - The number of events occurring in non-overlapping intervals are independent.
+    - The probability of exactly one event in a short interval of length (1 / n) is approximately λ / n.
+    - The probability of exactly two or more events in a short interval is essentially zero.
+
+### Example
+
+    Let X equal the number of typos on a printed page with a mean of 3 typos per page.
+    What is the probability that a randomly selected page has at least 1 typo on it?
+
+    Solution:
+    p(X ≥ 1) = 1 - p(X = 0)
+             = 1 - e⁻³3⁰ / 0!
+             = 1 - e⁻³
+             = 0.9502
+
+    What is the probability that a randomly selected page has at most 1 typo on it?
+    Solution:
+    p(X ≤ 1) = p(X = 0) + p(X = 1)
+             = e⁻³3⁰ / 0! + e⁻³3¹ / 1!
+             = e⁻³ + 3e⁻³
+             = 0.1992
+
+### Approximating the Binomial Distribution
+
+The Poisson distribution can be viewed as the limit of binomial distribution.
+Suppose X ~ Binomial(N, λ/N) where N is very large and λ/N is very small.
+We show that the PMF of X can be approximated by the PMF of a Poisson(λ).
+
+<img style="width:80%;display:block;margin:auto;" loading="lazy" src="imgs/4_poisson_binomial_proof.png" alt="poisson_binomial_proof">
+
+In the screenshot, n is the Binomial distribution parameter N.
+λ is the Poisson distribution parameter.
+λ/N is the Binomial distribution parameter p.
+The k is the fixed value for Poisson random variable.
+
+An intuitive understanding is that when N becomes larger, the Poisson interval is divided into N smaller sub-intervals (λ/N).
+The the sub-interval becomes sufficiently small, it can guarantee only one event happens in each sub-interval.
+<mark hl>If we regard an event occurrence in a sub-interval as a "success" in binomial distribution, then the following 2 probabilities are equivalent:</mark>
+- <mark hl>**The probability of k event occurrences (known average rate of λ) in an interval**</mark>, i.e. Poisson distribution
+- <mark hl>**The probability of receiving k successes in N independent trials with probability of success λ/N**</mark>, i.e. binomial distribution
+
+***This is useful because Poisson PMF is much easier to compute than the binomial***.
 
 
 
@@ -335,54 +400,4 @@ Formula:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
----
-
-## 4. Uniform Distribution
-
-What is it: The uniform distribution models a situation where all outcomes are equally likely.
-
-Types:
-- Discrete uniform: a finite number of equally likely outcomes
-- Continuous uniform: all values in an interval [a, b] are equally likely
-
-Formula (continuous):
-```
-f(x) = 1 / (b - a) for a <= x <= b
-```
-
-Examples:
-- Random number generator between 0 and 1
-- Picking a random time of day
-
----
-
-## Summary
-
-| Distribution | Typical Use Case |
-|--------------|------------------|
-| Normal       | Modeling natural phenomena, returns (approximate) |
-| Binomial     | Number of successes in fixed trials |
-| Poisson      | Number of events in a fixed interval |
-| Uniform      | Equally likely outcomes |
-
----
 

@@ -48,7 +48,11 @@ nav:
     - [Applications](4_distributions.md#The Normal Distribution_Applications)
     - [Rules](4_distributions.md#The Normal Distribution_Rules)
     - [Examples](4_distributions.md#The Normal Distribution_Examples 1)
-    - [Approximation to the Binomial Distribution](4_distributions.md#The Normal Distribution_Approximation to the Binomial Distribution)
+    - [Approximating the Binomial Distribution](4_distributions.md#The Normal Distribution_Approximating the Binomial Distribution)
+- [The Poisson Distribution](4_distributions.md#4 Probability Distributions_The Poisson Distribution)
+    - [Properties](4_distributions.md#The Poisson Distribution_Properties 1)
+    - [Example](4_distributions.md#The Poisson Distribution_Example)
+    - [Approximating the Binomial Distribution](4_distributions.md#The Poisson Distribution_Approximating the Binomial Distribution 1)
 
 Approximation to the Binomial Distribution
 ---
@@ -58,3 +62,4 @@ Credits go to:
 1. [ChatGPT](https://chatgpt.com/)
 2. [Sociology Graduate Statistics | University of Notre Dame](https://www3.nd.edu/~rwilliam/stats1/)
 3. [STAT 414 Introduction to Probability Theory | Penn State](https://online.stat.psu.edu/stat414/lesson/10/10.4)
+4. H. Pishro-Nik, "Introduction to probability, statistics, and random processes", available at https://www.probabilitycourse.com, Kappa Research LLC, 2014.
