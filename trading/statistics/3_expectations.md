@@ -16,9 +16,7 @@ For n numbers: x₁, x₂, ..., xₙ, the mean μ is:
 
     μ = (1/n) * Σxᵢ
 
-## Expected Value
-
-The expected value of a random variable is the arithmetic mean of that variable, i.e. E(X) = µ.
+The **expected value** of a random variable is the arithmetic mean of that variable, i.e. E(X) = µ.
 
 - Discrete variable: the expected value of a discrete random variable, X, is found by multiplying each X value by its probability and then summing over all values of the random variable.
 
@@ -35,13 +33,59 @@ The variance tells you how **spread out** the data is — how far from the mean 
 - Big variance: values are spread out.
 - Small variance: values are clustered close to the mean.
 
-The variance of a random variable X is defined as the expected squared deviation of the values of this random variable about their mean.
+The **variance** of a random variable X is defined as the expected squared deviation of the values of this random variable about their mean.
 
-    V(X) = E((X - μ)²) = E(X²) - μ²
+    V(X) = E((X - μ)²) = E(X²) - μ² = σ²
 
 In the discrete case, this is equivalent to:
 
-    V(X) =  Σ(xᵢ-μ)²p(xᵢ)
+    V(X) =  Σ(xᵢ - μ)²p(xᵢ) = σ²
+
+## Sample Mean and Variance
+
+Sample is a subset of the whole population.
+Sample mean is:
+
+    x̄ = (1/n) * Σxᵢ    where xᵢ is a subset (size of n) of all possible x's
+
+Sample variance:
+
+    s² = (1/(n-1)) * Σ(xᵢ - x̄)²
+       = (1/(n-1)) * E(Σ(xᵢ² - 2xᵢx̄ + x̄²))
+       = (1/(n-1)) * E(Σxᵢ² - Σ2xᵢx̄ + Σx̄²)
+       = (1/(n-1)) * E(Σxᵢ² - 2nx̄² + nx̄²)
+       = (1/(n-1)) * (Σxᵢ² - nx̄²)    where xᵢ is a subset (size of n) of all possible x's
+
+
+## <mark hl>Notation Clarifications</mark>
+- Big X represents a random variable.
+- Big Xᵢ represents a random variable whose process is "choose a random sample x₁, x₂, ..., xₙ of size n" from X.
+    - Small xᵢ represents a single value from population that is collected in a sample x.
+    - Small x̄ represents the mean of a particular sample, which can contain multiple values from the population.
+- Big X̄ represents a random variable of means of those random samples Xᵢ.
+    - It is an [estimator](1_definitions.md#key-concepts) of the population mean.
+    - X̄ = (X₁ + X₂ + ... + Xₙ) / n
+- Small s² represents a variance of a sample.
+- Big S² represents the estimator, and small s² is a particular value of it.
+- E(X) and V(X) meant for the whole population
+    - Sample mean and sample variance only concern values from a sample.
+    - E(X) and V(X) are for the whole population.
+They do NOT use for sample.
+        - E(Xᵢ) = E(X)
+        - V(Xᵢ) = V(X)
+
+Then we further have mean and variance for the mean estimator X̄:
+
+    E(X̄) = E((X₁ + X₂ + ... + Xₙ) / n)
+         = (E(X₁) + E(X₂) + ... + E(Xₙ)) / n
+         = μ
+
+    V(X̄) = V((X₁ + X₂ + ... + Xₙ) / n)
+         = V(X₁ + X₂ + ... + Xₙ) / n²
+         = (V(X₁) + V(X₂) + ... + V(Xₙ)) / n²     [Xᵢ are independent, check rule#15 below]
+         = σ² / n
+
+Proof for [why does sample variance have n - 1 in the denominator](3_expectations.md#why-does-sample-variance-have-n-1-in-the-denominator) is in the appendiex.
 
 ## Standard Deviation
 
@@ -141,8 +185,8 @@ Assume following, *a* and *b* are any given constants.
     Solution:
     V(X) = E((X - μ)²)
          = E(X² - 2Xμ + μ²)           [expand]
-         = E(X²) - E(2Xμ) + E(μ²)     [Rule#7]
-         = E(X²) - 2μE(X) + μ²        [Rule#7]
+         = E(X²) - E(2Xμ) + E(μ²)     [rule#7]
+         = E(X²) - 2μE(X) + μ²        [rule#7]
          = E(X²) - 2μ² + μ²
          = E(X²) - μ²
 
@@ -152,9 +196,9 @@ Assume following, *a* and *b* are any given constants.
 
     Solution:
     Let Y = aX
-    V(Y) = E(Y²) - E(Y)²              [Rule#10]
+    V(Y) = E(Y²) - E(Y)²              [rule#10]
          = E(a²X²) - E(aX)²
-         = a²E(X²) - a²E(X)²          [Rule#4]
+         = a²E(X²) - a²E(X)²          [rule#4]
          = a²(E(X²) - E(X)²)
          = a²V(X)
 
@@ -164,10 +208,10 @@ Assume following, *a* and *b* are any given constants.
 
     Solution:
     E(Z) = E((X - µₓ) / σₓ)
-         = (E(X) - µₓ) / σₓ           [Rule#7,Rule#3]
+         = (E(X) - µₓ) / σₓ           [rule#7,rule#3]
          = 0
-    V(Z) = V((X - µₓ) / σₓ)           [Rule#13]
-         = V(X) / σₓ²                 [Rule#12]
+    V(Z) = V((X - µₓ) / σₓ)           [rule#13]
+         = V(X) / σₓ²                 [rule#12]
          = 1
 
 #### Exercise 4
@@ -179,9 +223,9 @@ Assume following, *a* and *b* are any given constants.
     So Xᵢ² = Xᵢ (0² = 0, 1² = 1).
 
     E(X₁) = E(X₂) = E(X₃) = 0.5
-    E(X₁ + X₂ + X₃) = E(X₁) + E(X₂) + E(X₃) = 1.5                [Rule#8]
-    V(X₁) = V(X₂) = V(X₃) = E(X²) - E(X)² = 0.5 - 0.25 = 0.25    [Rule#10]
-    V(X₁ + X₂ + X₃) = V(X₁) + V(X₂) + V(X₃) = 0.75               [Rule#15]
+    E(X₁ + X₂ + X₃) = E(X₁) + E(X₂) + E(X₃) = 1.5                [rule#8]
+    V(X₁) = V(X₂) = V(X₃) = E(X²) - E(X)² = 0.5 - 0.25 = 0.25    [rule#10]
+    V(X₁ + X₂ + X₃) = V(X₁) + V(X₂) + V(X₃) = 0.75               [rule#15]
 
 ## Summary
 
@@ -206,3 +250,32 @@ Why important in time series / trading?
 - Mean reversion: negative autocorrelation.
 - ARIMA models: built on autocorrelation patterns.
 - Strategy testing: check if signals are statistically significant or just noise.
+
+## Appendix
+
+### Why Does Sample Variance Have n - 1 in the Denominator?
+
+The reason we use n-1 rather than n is so that the sample variance will be an [unbiased estimator](1_definitions.md#key-concepts) of the population variance σ².
+That is:
+
+    The sample variance is the formula for a particular sample:
+        s² = (1/(n-1)) * (Σxᵢ² - nx̄²)
+    Now we define an estimator S² for s² by replacing variables by estimators:
+        S² = (1/(n-1)) * (ΣXᵢ² - nX̄²)
+    Xᵢ is an unbiased estimator for population X, thus xᵢ.
+    X̄  is an unbiased estimator for mean of population X, thus x̄.
+
+    Now need to prove S² is an unbiased estimator of the population variance σ², i.e. E(S²) = σ²
+
+    Proof:
+    (1) From population variance definition σ² = E(X²) - μ², we have E(X²) = σ² + μ²
+    (2) E(Xᵢ²) = E(X²) = σ² + μ²
+    (3) E(X̄²) = V(X̄) + E(X̄)²
+              = σ² / n + μ²            [check Notation Clarifications section]
+
+    then:
+    E(S²) = E((1/(n-1)) * (ΣXᵢ² - nX̄²))
+          = (1/(n-1)) * E(ΣXᵢ² - nX̄²)
+          = (1/(n-1)) * (ΣE(Xᵢ²) - nE(X̄²))
+          = (1/(n-1)) * (n(σ² + μ²) - n(σ² / n + μ²))
+          = σ²

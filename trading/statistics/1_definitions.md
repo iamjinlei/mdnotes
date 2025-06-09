@@ -17,10 +17,23 @@ left_pane: toc
     - A subset of a population. We usually analyze samples - samples are supposed to tell us about the population.
     - Probability sample - a subset of the population for which all members had a known, non-zero probability of inclusion in the sample.
     - Random sample - a subset of the population for which all members had an equal probability of inclusion in the sample.
-- Population parameters
+- Population parameters:
      - Numerical characteristics of a population (the mean, median, mode are some of the simpler examples of population parameters)
-- Sample statistics, or sample parameters
+- Sample statistics:
      - Sample estimates of population parameters.
+
+| | Statistic | Parameter |
+|---|---|---|
+| Description | Describes a sample | Describes a population |
+| Calculation | Calculated from a sample | Calculated from the whole population |
+| Value | Variable depending on the sample | Fixed |
+
+- Estimator:
+    - A random variable whose underlying random process is choosing a sample.
+    - It is used to estimate a population parameter.
+    - Different from **estimate**, which is a particular value (calculated from a particular sample) of the estimator.
+    - The distribution of an estimator is the sampling distribution of the related statistic.
+    - **Unbiased estimator** is an estimator whose expected value (i.e., the mean of the distribution of the estimator) is the parameter being estimated.
 
 ## Levels of Measurement
 

@@ -22,6 +22,8 @@ nav:
 ## 3 [Expectations](3_expectations.md)
 - [Mean](3_expectations.md#mean)
 - [Variance](3_expectations.md#variance)
+- [Sample Mean and Variance](3_expectations.md#sample-mean-and-variance)
+- <mark hl>[Notation Clarifications](3_expectations.md#notation-clarifications)</mark>
 - [Standard Deviation](3_expectations.md#standard-deviation)
 - [Covariance](3_expectations.md#covariance)
 - [Correlation](3_expectations.md#correlation)
@@ -29,6 +31,8 @@ nav:
 - [Expectation Rules](3_expectations.md#expectation-rules)
     - [Exercises](3_expectations.md#exercises)
 - [Summary](3_expectations.md#summary)
+- [Appendix](3_expectations.md#appendix)
+    - [Why Does Sample Variance Have n - 1 in the Denominator?](3_expectations.md#why-does-sample-variance-have-n-1-in-the-denominator)
 
 ## 4 [Probability Distributions](4_distributions.md)
 - [Random Variables](4_distributions.md#random-variables)
@@ -56,9 +60,10 @@ nav:
 
 ---
 
-Credits go to:
+### Credits
 
-1. [ChatGPT](https://chatgpt.com/)
-2. [Sociology Graduate Statistics | University of Notre Dame](https://www3.nd.edu/~rwilliam/stats1/)
-3. [STAT 414 Introduction to Probability Theory | Penn State](https://online.stat.psu.edu/stat414/lesson/10/10.4)
-4. H. Pishro-Nik, "Introduction to probability, statistics, and random processes", available at https://www.probabilitycourse.com, Kappa Research LLC, 2014.
+- [ChatGPT](https://chatgpt.com/)
+- [Sociology Graduate Statistics | University of Notre Dame](https://www3.nd.edu/~rwilliam/stats1/)
+- [STAT 414 Introduction to Probability Theory | Penn State](https://online.stat.psu.edu/stat414/lesson/10/10.4)
+- H. Pishro-Nik, "Introduction to probability, statistics, and random processes", available at https://www.probabilitycourse.com, Kappa Research LLC, 2014.
+- [EconMacro](https://www.jamelsaadaoui.com/unbiased-estimator-for-population-variance-clearly-explained/)
