@@ -28,7 +28,7 @@ It is specifically defined for discrete random variables.
     - 0 ≤ p(X = x) ≤ 1
     - Σp(X = x) = 1
 - **Cumulative Distribution Function (CDF)** describes probability that a random variable X takes on a value less than or equal to some particular value a is often written as:
-    <img style="width:32%;display:block;margin:auto;" loading="lazy" src="imgs/4_cdf_discrete.png" alt="cdf_discrete">
+    <img style="width:32%;display:block;margin:auto;" src="imgs/4_cdf_discrete.png" alt="cdf_discrete">
 
 ### Continuous Random Variables
 - In general, for continuous random variables, the occurrence of any exact value of X may be regarded as having 0 probability.
@@ -36,7 +36,7 @@ For this reason, one discuss the probability that X takes on some value a, the s
 Denoted by **Probability Density Function (PDF)**.
     - 𝑓(a) = probability density of X at a
 - The **Cumulative Distribution Function (CDF)** is written as:
-    <img style="width:55%;display:block;margin:auto;" loading="lazy" src="imgs/4_cdf_continuous.png" alt="cdf_continuous">
+    <img style="width:55%;display:block;margin:auto;" src="imgs/4_cdf_continuous.png" alt="cdf_continuous">
 - The probability a continous random variable takes on any value between a and b:
     - p(a ≤ X ≤ b) = ∫𝑓(x)𝑑x for a ≤ x ≤ b
     - p(a ≤ X ≤ b) = 𝐹(b) - 𝐹(a)
@@ -78,7 +78,7 @@ Sometimes the number of combinations is known as a **binomial coefficient**, and
 
 Combination is also often represented using following notion:
 
-<img style="width:25%;display:block;margin:auto;" loading="lazy" src="imgs/4_combination_notion.png" alt="combination_notion">
+<img style="width:25%;display:block;margin:auto;" src="imgs/4_combination_notion.png" alt="combination_notion">
 
 
 ## The Binomial Distribution
@@ -114,7 +114,7 @@ The probability of getting r successes in N independent trials with each having 
 
 More formally, in sampling a **stationary** Bernoulli process, with the probability of success equal to p, the probability of observing exactly r successes in N independent trials is:
 
-<img style="width:70%;display:block;margin:auto;" loading="lazy" src="imgs/4_binomial_dist_pdf.png" alt="binomial_dist_pdf">
+<img style="width:70%;display:block;margin:auto;" src="imgs/4_binomial_dist_pdf.png" alt="binomial_dist_pdf">
 
 Another way of defining binomial distribution:
 
@@ -146,21 +146,21 @@ Another way of defining binomial distribution:
 - For small p and small N, the binomial distribution is what we call skewed right.
 That is, the bulk of the probability falls in the smaller numbers, and the distribution tails off to the right.
 
-    <img style="width:45%;display:block;margin:auto;" loading="lazy" src="imgs/4_binomial_dist_shape_sp_sn.png" alt="binomial_dist_shape_small_p_small_n">
+    <img style="width:45%;display:block;margin:auto;" src="imgs/4_binomial_dist_shape_sp_sn.png" alt="binomial_dist_shape_small_p_small_n">
 
 - For large p and small N, the binomial distribution is what we call skewed left.
 That is, the bulk of the probability falls in the larger numbers and the distribution tails off to the left.
 
-    <img style="width:45%;display:block;margin:auto;" loading="lazy" src="imgs/4_binomial_dist_shape_lp_sn.png" alt="binomial_dist_shape_large_p_small_n">
+    <img style="width:45%;display:block;margin:auto;" src="imgs/4_binomial_dist_shape_lp_sn.png" alt="binomial_dist_shape_large_p_small_n">
 
 - For p = 0.5 and large and small N, the binomial distribution is what we call symmetric.
 That is, the distribution is without skewness.
 
-    <img style="width:45%;display:block;margin:auto;" loading="lazy" src="imgs/4_binomial_dist_shape_p50.png" alt="binomial_dist_shape_large_p50">
+    <img style="width:45%;display:block;margin:auto;" src="imgs/4_binomial_dist_shape_p50.png" alt="binomial_dist_shape_large_p50">
 
 - When p ≠ 0.5, when N becomes large, the binomial distribution approaches symmetry.
 
-    <img style="width:45%;display:block;margin:auto;" loading="lazy" src="imgs/4_binomial_dist_shape_ln.png" alt="binomial_dist_shape_large_n">
+    <img style="width:45%;display:block;margin:auto;" src="imgs/4_binomial_dist_shape_ln.png" alt="binomial_dist_shape_large_n">
 
 
 ### Examples
@@ -189,7 +189,7 @@ It describes data that clusters around a mean with symmetric spread.
     - Standard deviation (σ): controls the spread
 - Probability density function (PDF):
 
-    <img style="width:35%;display:block;margin:auto;" loading="lazy" src="imgs/4_normal_dist_pdf.png" alt="normal_dist_pdf">
+    <img style="width:35%;display:block;margin:auto;" src="imgs/4_normal_dist_pdf.png" alt="normal_dist_pdf">
 
 - The notation N(µ, σ²) means normally distributed with mean µ and variance σ².
 If we say X ~ N(µ, σ²), we mean that X is distributed N(µ, σ²).
@@ -201,7 +201,7 @@ If we say X ~ N(µ, σ²), we mean that X is distributed N(µ, σ²).
 
         p(µ - 2σ ≤ X ≤ µ + 2σ) = 0.9544
 
-    <img style="width:60%;display:block;margin:auto;" loading="lazy" src="imgs/4_normal_dist_curve.png" alt="normal_dist_curve">
+    <img style="width:60%;display:block;margin:auto;" src="imgs/4_normal_dist_curve.png" alt="normal_dist_curve">
 
 
 ### Applications
@@ -237,20 +237,20 @@ The trick is to convert arbitrary normal distribution with µ and σ into a stan
             Due to the symmetry of the curve, when 𝐹(a) > 0.5, a > 0, and
                                               when 𝐹(a) < 0.5, a < 0.
 
-        <img style="width:60%;display:block;margin:auto;" loading="lazy" src="imgs/4_normal_dist_rule1.png" alt="normal_dist_rule1">
+        <img style="width:60%;display:block;margin:auto;" src="imgs/4_normal_dist_rule1.png" alt="normal_dist_rule1">
 
     - Rule #2
 
             p(Z ≥ a) = 1 - 𝐹(a)    when a is positive
                      = 𝐹(-a)       when a is negative
 
-        <img style="width:60%;display:block;margin:auto;" loading="lazy" src="imgs/4_normal_dist_rule2.png" alt="normal_dist_rule2">
+        <img style="width:60%;display:block;margin:auto;" src="imgs/4_normal_dist_rule2.png" alt="normal_dist_rule2">
 
     - Rule #3
 
             p(a ≤ Z ≤ b) = 𝐹(b) - 𝐹(a)
 
-        <img style="width:60%;display:block;margin:auto;" loading="lazy" src="imgs/4_normal_dist_rule3.png" alt="normal_dist_rule3">
+        <img style="width:60%;display:block;margin:auto;" src="imgs/4_normal_dist_rule3.png" alt="normal_dist_rule3">
 
     - Rule #4
 
@@ -326,7 +326,7 @@ Examples of Poisson random variable:
 
 - If X is a Poisson random variable, then the probability mass function (PMF) is:
 
-    <img style="width:22%;display:block;margin:auto;" loading="lazy" src="imgs/4_poisson_dist_pmf.png" alt="poisson_dist_pmf">
+    <img style="width:22%;display:block;margin:auto;" src="imgs/4_poisson_dist_pmf.png" alt="poisson_dist_pmf">
 
     - x = 0, 1, 2, ...
     - λ is the average rate of event occurrence per interval.
@@ -375,7 +375,7 @@ The Poisson distribution can be viewed as the limit of binomial distribution.
 Suppose X ~ Binomial(N, λ/N) where N is very large and λ/N is very small.
 We show that the PMF of X can be approximated by the PMF of a Poisson(λ).
 
-<img style="width:80%;display:block;margin:auto;" loading="lazy" src="imgs/4_poisson_binomial_proof.png" alt="poisson_binomial_proof">
+<img style="width:80%;display:block;margin:auto;" src="imgs/4_poisson_binomial_proof.png" alt="poisson_binomial_proof">
 
 In the screenshot, n is the Binomial distribution parameter N.
 λ is the Poisson distribution parameter.

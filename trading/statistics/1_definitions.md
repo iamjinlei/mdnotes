@@ -115,21 +115,21 @@ We usually only worry about skewness in extreme cases.
 
 - Population mean
 
-    <img style="width:20%;display:block;margin:auto;" loading="lazy" src="imgs/1_mean.png" alt="mean">
+    <img style="width:20%;display:block;margin:auto;" src="imgs/1_mean.png" alt="mean">
 
 - Population mean with a frequency distribution
 
-    <img style="width:70%;display:block;margin:auto;" loading="lazy" src="imgs/1_mean_freq.png" alt="mean">
+    <img style="width:70%;display:block;margin:auto;" src="imgs/1_mean_freq.png" alt="mean">
 
 - Population variance
 
-    <img style="width:50%;display:block;margin:auto;" loading="lazy" src="imgs/1_variance.png" alt="mean">
+    <img style="width:50%;display:block;margin:auto;" src="imgs/1_variance.png" alt="mean">
 
 - Population variance with a frequency distribution
 
-    <img style="width:40%;display:block;margin:auto;" loading="lazy" src="imgs/1_variance_freq.png" alt="mean">
+    <img style="width:40%;display:block;margin:auto;" src="imgs/1_variance_freq.png" alt="mean">
 
 
 - population standard deviation
 
-    <img style="width:30%;display:block;margin:auto;" loading="lazy" src="imgs/1_stddev.png" alt="mean">
+    <img style="width:30%;display:block;margin:auto;" src="imgs/1_stddev.png" alt="mean">

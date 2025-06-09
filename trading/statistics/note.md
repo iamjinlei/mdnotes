@@ -54,7 +54,6 @@ nav:
     - [Example](4_distributions.md#The Poisson Distribution_Example)
     - [Approximating the Binomial Distribution](4_distributions.md#The Poisson Distribution_Approximating the Binomial Distribution 1)
 
-Approximation to the Binomial Distribution
 ---
 
 Credits go to:
