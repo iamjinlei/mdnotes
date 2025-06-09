@@ -5,7 +5,7 @@ nav:
 
 
 ## 1 [Definitions](1_definitions.md)
-- [Key Concepts](1_definitions.md#1 Definitions_Key Concepts)
+- [Key Concepts](1_definitions.md#key-concepts)
 - [Levels of Measurement](1_definitions.md#1 Definitions_Levels of Measurement)
 - [Measures of Central Tendency](1_definitions.md#1 Definitions_Measures of Central Tendency)
 - [Measures of Dispersion](1_definitions.md#1 Definitions_Measures of Dispersion)
