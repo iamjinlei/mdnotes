@@ -10,6 +10,9 @@ left_pane: toc
 ## Random Variables
 
 - **Random variable** is a well-defined rule for assigning a numerical value to every possible outcome of an experiment.
+    - The sample space is called **S**.
+    - All possible values of a random variable **X** is called the **support** or **space** of X.
+    - X is a rule or function that map each s from **S** to one and only one x from the **support** of X.
 - Typically, capital letters such as X, Y, and Z are used to denote random variables.
 Lowercase letters such as x, y, z and a, b, c are used to denote particular values that the random variable can take on.
     - The expression p(X = x) symbolizes the probability that the random variable X takes on the particular value x.
@@ -175,8 +178,83 @@ That is, the distribution is without skewness.
                             = 0.2256 + 0.1611 + 0.0806 + 0.0269 + 0.0054 + 0.0005
                             = 0.5
 
+## The Poisson Distribution
 
-## The Normal Distribution
+The Poisson distribution models the number of times an event happens in a fixed interval of time or space when events occur independently at a constant average rate.
+Examples of Poisson random variable:
+- The number of typos on a printed page
+- The number of cars passing through the intersection of Allen Street and College Avenue in one minute
+- The number of customers at an ATM in 10-minute intervals
+
+### Properties
+
+- If X is a Poisson random variable, then the probability mass function (PMF) is:
+
+    <img style="width:22%;display:block;margin:auto;" src="imgs/4_poisson_dist_pmf.png" alt="poisson_dist_pmf">
+
+    - x = 0, 1, 2, ...
+    - λ is the average rate of event occurrence per interval.
+    - e ≈ 2.71828
+
+- Verify ∑𝑓(x) = 1
+
+    Taylor series for eˣ = ∑xᵏ/k! for k = 0, 1, 2, ...
+    Now ∑𝑓(x) = ∑(e^-λ * λᵏ / k!)
+              = e^-λ * ∑(λᵏ / k!)
+              = e^-λ * e^λ
+              = 1
+
+- Mean and variance of a Poisson random variable are both λ.
+
+- There are theoretically an infinite number of possible Poisson distributions.
+Any specific Poisson distribution depends on the parameter λ.
+
+- Let X denote the number of events in a given continuous interval.
+It follows an approximate Poisson process with parameter λ > 0 if:
+    - The number of events occurring in non-overlapping intervals are independent.
+    - The probability of exactly one event in a short interval of length (1 / n) is approximately λ / n.
+    - The probability of exactly two or more events in a short interval is essentially zero.
+
+### Example
+
+    Let X equal the number of typos on a printed page with a mean of 3 typos per page.
+    What is the probability that a randomly selected page has at least 1 typo on it?
+
+    Solution:
+    p(X ≥ 1) = 1 - p(X = 0)
+             = 1 - e⁻³3⁰ / 0!
+             = 1 - e⁻³
+             = 0.9502
+
+    What is the probability that a randomly selected page has at most 1 typo on it?
+    Solution:
+    p(X ≤ 1) = p(X = 0) + p(X = 1)
+             = e⁻³3⁰ / 0! + e⁻³3¹ / 1!
+             = e⁻³ + 3e⁻³
+             = 0.1992
+
+### Approximating the Binomial Distribution
+
+The Poisson distribution can be viewed as the limit of binomial distribution.
+Suppose X ~ Binomial(N, λ/N) where N is very large and λ/N is very small.
+We show that the PMF of X can be approximated by the PMF of a Poisson(λ).
+
+<img style="width:80%;display:block;margin:auto;" src="imgs/4_poisson_binomial_proof.png" alt="poisson_binomial_proof">
+
+In the screenshot, n is the Binomial distribution parameter N.
+λ is the Poisson distribution parameter.
+λ/N is the Binomial distribution parameter p.
+The k is the fixed value for Poisson random variable.
+
+An intuitive understanding is that when N becomes larger, the Poisson interval is divided into N smaller sub-intervals (λ/N).
+The the sub-interval becomes sufficiently small, it can guarantee only one event happens in each sub-interval.
+<mark hl>If we regard an event occurrence in a sub-interval as a "success" in binomial distribution, then the following 2 probabilities are equivalent:</mark>
+- <mark hl>**The probability of k event occurrences (known average rate of λ) in an interval**</mark>, i.e. Poisson distribution
+- <mark hl>**The probability of receiving k successes in N independent trials with probability of success λ/N**</mark>, i.e. binomial distribution
+
+***This is useful because Poisson PMF is much easier to compute than the binomial***.
+
+## Normal Distributions
 
 ### Properties
 
@@ -314,90 +392,67 @@ The normal distribution can be used to approximate the binomial distribution.
         - p(X ≥ a + 0.5) for p(X ≥ a + 1)
 
 
-## The Poisson Distribution
+## Exponential Distributions
 
-The Poisson distribution models the number of times an event happens in a fixed interval of time or space when events occur independently at a constant average rate.
-Examples of Poisson random variable:
-- The number of typos on a printed page
-- The number of cars passing through the intersection of Allen Street and College Avenue in one minute
-- The number of customers at an ATM in 10-minute intervals
+Exponential distributions model the probability of the waiting time w of the first event arrives.
+As a comparison, the Poisson distribution models the number of times an event happens in a fixed interval of time.
+
+<img style="width:40%;display:block;margin:auto;" src="imgs/4_exponential_dist_concept.png" alt="exponential_dist_concept">
 
 ### Properties
 
-- If X is a Poisson random variable, then the probability mass function (PMF) is:
+- If X is an exponential random variable, then the probability density function (PDF) is:
 
-    <img style="width:22%;display:block;margin:auto;" src="imgs/4_poisson_dist_pmf.png" alt="poisson_dist_pmf">
+    <img style="width:22%;display:block;margin:auto;" src="imgs/4_exponential_dist_pdf.png" alt="poisson_dist_pmf">
 
-    - x = 0, 1, 2, ...
-    - λ is the average rate of event occurrence per interval.
-    - e ≈ 2.71828
+    - θ > 0
+    - x ≥ 0
 
-- Verify ∑𝑓(x) = 1
+- Curves with Poisson distribution parameter λ where θ = 1 / λ.
 
-    Taylor series for eˣ = ∑xᵏ/k! for k = 0, 1, 2, ...
-    Now ∑𝑓(x) = ∑(e^-λ * λᵏ / k!)
-              = e^-λ * ∑(λᵏ / k!)
-              = e^-λ * e^λ
-              = 1
+    <img style="width:50%;display:block;margin:auto;" src="imgs/4_exponential_dist_curve.png" alt="poisson_dist_curve">
 
-- Mean and variance of a Poisson random variable are both λ.
+    - λ represents the mean number of events per unit interval in a Poisson distribution.
+    - θ represents the mean interval between events in an exponential distribution.
 
-- There are theoretically an infinite number of possible Poisson distributions.
-Any specific Poisson distribution depends on the parameter λ.
+- Mean and variance of an exponential random variable are θ and θ².
 
-- Let X denote the number of events in a given continuous interval.
-It follows an approximate Poisson process with parameter λ > 0 if:
-    - The number of events occurring in non-overlapping intervals are independent.
-    - The probability of exactly one event in a short interval of length (1 / n) is approximately λ / n.
-    - The probability of exactly two or more events in a short interval is essentially zero.
+- Exponential distribution PDF can be derived from the Poisson distribution.
 
-### Example
+    𝐹(w) = p(W ≤ w)
+         = 1 - p(W > w)
+         = 1 - p(no events in [0, w] interval)
+         = 1 - Poisson(X = 0, λw)
+         = 1 - e^(-λw) * λ⁰ / 0!
+         = 1 - e^(-λw)
+         = 1 - e^(-w/θ)
+    𝑓(w) = 𝐹'(w) = -e^(-w/θ) * (-1/θ)
+                 = 1/θ * e^(-w/θ)
 
-    Let X equal the number of typos on a printed page with a mean of 3 typos per page.
-    What is the probability that a randomly selected page has at least 1 typo on it?
+### Examples
+
+#### Example 1
+
+    Students arrive at a restaurant according to an approximate Poisson process at a mean rate
+    of 30 students per hour. What is the probability that the bouncer has to wait more than
+    3 minutes to card the next student?
 
     Solution:
-    p(X ≥ 1) = 1 - p(X = 0)
-             = 1 - e⁻³3⁰ / 0!
-             = 1 - e⁻³
-             = 0.9502
+    θ = 2 mins
+    𝐹(W > 3) = 1 - 𝐹(W ≤ 3)
+             = 1 - (1 - e^(-3/2)
+             ≈ 0.223
 
-    What is the probability that a randomly selected page has at most 1 typo on it?
+#### Example 2
+
+    The number of miles that a car can run before its battery wears out is exponentially
+    distributed with an average of 10,000 miles. The owner of the car needs to take a
+    5000-mile trip. What is the probability that he will be able to complete the trip without
+    having to replace the car battery?
+
     Solution:
-    p(X ≤ 1) = p(X = 0) + p(X = 1)
-             = e⁻³3⁰ / 0! + e⁻³3¹ / 1!
-             = e⁻³ + 3e⁻³
-             = 0.1992
-
-### Approximating the Binomial Distribution
-
-The Poisson distribution can be viewed as the limit of binomial distribution.
-Suppose X ~ Binomial(N, λ/N) where N is very large and λ/N is very small.
-We show that the PMF of X can be approximated by the PMF of a Poisson(λ).
-
-<img style="width:80%;display:block;margin:auto;" src="imgs/4_poisson_binomial_proof.png" alt="poisson_binomial_proof">
-
-In the screenshot, n is the Binomial distribution parameter N.
-λ is the Poisson distribution parameter.
-λ/N is the Binomial distribution parameter p.
-The k is the fixed value for Poisson random variable.
-
-An intuitive understanding is that when N becomes larger, the Poisson interval is divided into N smaller sub-intervals (λ/N).
-The the sub-interval becomes sufficiently small, it can guarantee only one event happens in each sub-interval.
-<mark hl>If we regard an event occurrence in a sub-interval as a "success" in binomial distribution, then the following 2 probabilities are equivalent:</mark>
-- <mark hl>**The probability of k event occurrences (known average rate of λ) in an interval**</mark>, i.e. Poisson distribution
-- <mark hl>**The probability of receiving k successes in N independent trials with probability of success λ/N**</mark>, i.e. binomial distribution
-
-***This is useful because Poisson PMF is much easier to compute than the binomial***.
-
-
-
-
-
-
-
-
-
-
-
-
+    Let X denote the number of miles that the car can run before its battery wears out.
+    X is exponentially distributed with θ = 10000 miles
+    𝐹(W > 5000) = 1 - 𝐹(W ≤ 5000)
+                = 1 - (1 - e^(-5000/10000)
+                ≈ 0.604

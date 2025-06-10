@@ -40,3 +40,4 @@ E(X) = ∫x𝑓(x)𝑑x = µₓ
 ɴCᵣ reads as N choose r
 
 λ
+θ
