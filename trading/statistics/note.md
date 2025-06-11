@@ -22,8 +22,6 @@ nav:
 ## 3 [Expectations](3_expectations.md)
 - [Mean](3_expectations.md#mean)
 - [Variance](3_expectations.md#variance)
-- [Sample Mean and Variance](3_expectations.md#sample-mean-and-variance)
-- <mark hl>[Notation Clarifications](3_expectations.md#notation-clarifications)</mark>
 - [Standard Deviation](3_expectations.md#standard-deviation)
 - [Covariance](3_expectations.md#covariance)
 - [Correlation](3_expectations.md#correlation)
@@ -31,8 +29,6 @@ nav:
 - [Expectation Rules](3_expectations.md#expectation-rules)
     - [Exercises](3_expectations.md#exercises)
 - [Summary](3_expectations.md#summary)
-- [Appendix](3_expectations.md#appendix)
-    - [Why Does Sample Variance Have n - 1 in the Denominator?](3_expectations.md#why-does-sample-variance-have-n-1-in-the-denominator)
 
 ## 4 [Probability Distributions](4_distributions.md)
 - [Random Variables](4_distributions.md#random-variables)
@@ -60,6 +56,16 @@ nav:
 - [Exponential Distributions](4_distributions.md#exponential-distributions)
     - [Properties](4_distributions.md#properties-2)
     - [Examples](4_distributions.md#properties-2)
+
+## 5 [Sampling](5_sampling.md)
+- [Estimation](5_sampling.md#estimation)
+- [Sample Statistics](5_sampling.md#sample-statistics)
+- [Sample Distributions](5_sampling.md#sample-distributions)
+    - [Why Does Sample Variance Have n - 1 in the Denominator?](5_sampling.md#why-does-sample-variance-have-n-1-in-the-denominator)
+    - [Shape of X̄](5_sampling.md#shape-of-x)
+- [The T Distribution](5_sampling.md#the-t-distribution)
+- [Confidence Intervals](5_sampling.md#confidence-intervals)
+
 
 ---
 

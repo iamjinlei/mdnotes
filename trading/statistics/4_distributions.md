@@ -394,40 +394,44 @@ The normal distribution can be used to approximate the binomial distribution.
 
 ## Exponential Distributions
 
-Exponential distributions model the probability of the waiting time w of the first event arrives.
+Exponential distributions model the probability of the waiting time w until the first event arrives.
 As a comparison, the Poisson distribution models the number of times an event happens in a fixed interval of time.
 
 <img style="width:40%;display:block;margin:auto;" src="imgs/4_exponential_dist_concept.png" alt="exponential_dist_concept">
 
 ### Properties
 
-- If X is an exponential random variable, then the probability density function (PDF) is:
+- If X is an exponential random variable of the waiting time, then the probability density function (PDF) is:
 
-    <img style="width:22%;display:block;margin:auto;" src="imgs/4_exponential_dist_pdf.png" alt="poisson_dist_pmf">
+    <img style="width:22%;display:block;margin:auto;" src="imgs/4_exponential_dist_pdf1.png" alt="exponential_dist_pdf1">
 
-    - θ > 0
-    - x ≥ 0
+    Alternatively, PDF can also be represented by Poisson parameter λ.
 
-- Curves with Poisson distribution parameter λ where θ = 1 / λ.
-
-    <img style="width:50%;display:block;margin:auto;" src="imgs/4_exponential_dist_curve.png" alt="poisson_dist_curve">
+    <img style="width:20%;display:block;margin:auto;" src="imgs/4_exponential_dist_pdf2.png" alt="exponential_dist_pdf2">
 
     - λ represents the mean number of events per unit interval in a Poisson distribution.
     - θ represents the mean interval between events in an exponential distribution.
+        - θ > 0
+        - θ = 1 / λ
+    - x ≥ 0
+
+- Curves with changeing λ.
+
+    <img style="width:50%;display:block;margin:auto;" src="imgs/4_exponential_dist_curve.png" alt="exponential_dist_curve">
 
 - Mean and variance of an exponential random variable are θ and θ².
 
 - Exponential distribution PDF can be derived from the Poisson distribution.
 
-    𝐹(w) = p(W ≤ w)
-         = 1 - p(W > w)
-         = 1 - p(no events in [0, w] interval)
+    𝐹(x) = p(X ≤ x)
+         = 1 - p(X > x)
+         = 1 - p(no events in [0, x] interval)
          = 1 - Poisson(X = 0, λw)
          = 1 - e^(-λw) * λ⁰ / 0!
          = 1 - e^(-λw)
-         = 1 - e^(-w/θ)
-    𝑓(w) = 𝐹'(w) = -e^(-w/θ) * (-1/θ)
-                 = 1/θ * e^(-w/θ)
+         = 1 - e^(-x/θ)
+    𝑓(x) = 𝐹'(x) = -e^(-x/θ) * (-1/θ)
+                 = 1/θ * e^(-x/θ)
 
 ### Examples
 
@@ -439,7 +443,7 @@ As a comparison, the Poisson distribution models the number of times an event ha
 
     Solution:
     θ = 2 mins
-    𝐹(W > 3) = 1 - 𝐹(W ≤ 3)
+    𝐹(X > 3) = 1 - 𝐹(X ≤ 3)
              = 1 - (1 - e^(-3/2)
              ≈ 0.223
 
@@ -453,6 +457,79 @@ As a comparison, the Poisson distribution models the number of times an event ha
     Solution:
     Let X denote the number of miles that the car can run before its battery wears out.
     X is exponentially distributed with θ = 10000 miles
-    𝐹(W > 5000) = 1 - 𝐹(W ≤ 5000)
+    𝐹(X > 5000) = 1 - 𝐹(X ≤ 5000)
                 = 1 - (1 - e^(-5000/10000)
                 ≈ 0.604
+
+
+## Gamma Distributions
+
+Gamma distributions model the probability of the waiting time w until the 𝛼ᵗʰ event arrives given mean waiting.
+
+<img style="width:42%;display:block;margin:auto;" src="imgs/4_gamma_dist_concept.png" alt="gamma_dist_concept">
+
+### Properties
+
+- If X is a gamma random variable of the waiting time, then the probability density function (PDF) is:
+
+    <img style="width:33%;display:block;margin:auto;" src="imgs/4_gamma_dist_pdf1.png" alt="gamma_dist_pdf1">
+
+    Alternatively, PDF can also be represented by Poisson parameter λ.
+
+    <img style="width:23%;display:block;margin:auto;" src="imgs/4_gamma_dist_pdf2.png" alt="gamma_dist_pdf2">
+
+    - λ represents the mean number of events per unit interval in a Poisson distribution.
+    - θ represents the mean interval between events in an exponential distribution.
+        - θ > 0
+        - θ = 1 / λ
+    - x > 0
+    - Γ(𝛼) = (𝛼 - 1)! is the gamma function
+        - 𝛼 > 0
+
+- Gamma function:
+
+    <img style="width:28%;display:block;margin:auto;" src="imgs/4_gamma_function.png" alt="gamma_function">
+
+        Γ(t) = (t - 1) * Γ(t-1)  given t > 1.
+        Γ(n) = (n - 1)!          if t = n, a positive integer.
+
+- Curves with changing θ and 𝛼.
+
+    <img style="width:50%;display:block;margin:auto;" src="imgs/4_gamma_dist_curve1.png" alt="gamma_dist_curve1">
+
+    <img style="width:50%;display:block;margin:auto;" src="imgs/4_gamma_dist_curve2.png" alt="gamma_dist_curve2">
+
+- Mean and variance of a gamma random variable are 𝛼θ and 𝛼θ².
+
+### Example
+
+    Engineers designing the next generation of space shuttles plan to include two fuel pumps
+    one active, the other in reserve. If the primary pump malfunctions, the second is
+    automatically brought on line. Suppose a typical mission is expected to require that fuel
+    be pumped for at most 50 hours. According to the manufacturer's specifications, pumps are
+    expected to fail once every 100 hours. What are the chances that such a fuel pump system
+    would not remain functioning for the full 50 hours?
+
+    Solution:
+    Let X denote the waiting time until 𝛼 = 2nd pump breaks down.
+    X is gamma distributed with θ = 100 hours
+    𝑓(x) = 1/10000 * x * e^(-x/100)
+    p(X < 50) = ∫𝑓(x)𝑑x for 0 < x < 50
+
+
+## Chi-Square Distributions
+
+The chi-square distribution is just a special case of the gamma distribution!
+
+### Properties
+
+- Let X follow a gamma distribution with 0 = 2 and 𝛼 = r/2, then its the probability density function (PDF) is:
+
+    <img style="width:35%;display:block;margin:auto;" src="imgs/4_chisquare_dist_pdf.png" alt="chisquare_dist_pdf">
+
+    - r is a positive integer.
+    - X follows a chi-square distribution with r degrees of freedom, denoted 𝒳²\(r\), read "chi-square-r."
+
+- Mean and variance of a chi-square random variable with r degrees of freedom are r and 2r.
+
+
