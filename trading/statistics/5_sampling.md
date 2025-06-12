@@ -86,7 +86,13 @@ Therefore X̄ is itself a random variable, which has its own mean and variance:
 
     StdDev(X̄) = σ / sqrt(n)    also known as the true standard error of the mean
 
-### Why Does Sample Variance Have n - 1 in the Denominator?
+### Why Does Sample Mean Variance V(X̄) Have Denominator n?
+
+Intuitively, as more sample size increases (i.e. more observations from one sample), the sample mean would get closer to the true mean.
+As a result the sample means are getting closer.
+Their variance becomes smaller (as n becomes larger).
+
+### Why Does Sample Variance S² Have n - 1 in the Denominator?
 
 The reason we use n-1 rather than n is so that the sample variance will be an [unbiased estimator](1_definitions.md#key-concepts) of the population variance σ².
 That is:
@@ -104,7 +110,7 @@ That is:
     (1) From population variance definition σ² = E(X²) - μ², we have E(X²) = σ² + μ²
     (2) E(Xᵢ²) = E(X²) = σ² + μ²
     (3) E(X̄²) = V(X̄) + E(X̄)²
-              = σ² / n + μ²            [check Notation Clarifications section]
+              = σ² / n + μ²
 
     then:
     E(S²) = E((1/(n-1)) * (ΣXᵢ² - nX̄²))

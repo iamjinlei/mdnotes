@@ -37,6 +37,7 @@ E(X) = ∫x𝑓(x)𝑑x = µₓ
 
 ∞
 →
+±
 
 𝐹(x)
 𝑓(x)
@@ -44,11 +45,14 @@ E(X) = ∫x𝑓(x)𝑑x = µₓ
 ɴCᵣ reads as N choose r
 
 𝛼
+β
 λ
 θ
+
 θ̂
 μ̂
 σ̂
 Ŝ
+𝗉̂
 
 Γ big gamma
