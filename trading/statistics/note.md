@@ -56,11 +56,17 @@ nav:
 - [Exponential Distributions](4_distributions.md#exponential-distributions)
     - [Properties](4_distributions.md#properties-2)
     - [Examples](4_distributions.md#properties-2)
+- [Gamma Distributions](4_distributions.md#gamma-distributions)
+    - [Properties](4_distributions.md#properties-3)
+    - [Example](4_distributions.md#example-4)
+- [Chi-Square Distributions](4_distributions.md#chi-square-distributions)
+    - [Properties](4_distributions.md#properties-4)
 
 ## 5 [Sampling](5_sampling.md)
 - [Estimation](5_sampling.md#estimation)
 - [Sample Statistics](5_sampling.md#sample-statistics)
 - [Sample Distributions](5_sampling.md#sample-distributions)
+    - <mark hl>[Central Limit Theorem](5_sampling.md#central-limit-theorem)</mark>
     - [Why Does Sample Mean Variance V(X̄) Have Denominator n?](5_sampling.md#why-does-sample-mean-variance-v-x-have-denominator-n)
     - [Why Does Sample Variance S² Have n - 1 in the Denominator?](5_sampling.md#why-does-sample-variance-s²-have-n-1-in-the-denominator)
     - [Shape of X̄](5_sampling.md#shape-of-x)
@@ -73,12 +79,17 @@ nav:
 - [Test Statistics](6_hypothesis_testing.md#test-statistics)
     - [Z Test Statistic](6_hypothesis_testing.md#z-test-statistic)
     - [T Test Statistic](6_hypothesis_testing.md#t-test-statistic)
+    - [Pearson Chi-square Test Statistic](6_hypothesis_testing.md#pearson-chi-square-test-statistic)
     - [Hypothesis Testing Using Confidence Intervals](6_hypothesis_testing.md#hypothesis-testing-using-confidence-intervals)
 - [Examples](6_hypothesis_testing.md#examples)
     - [Example 1 (One-Sided Z-Statistic with One Sample)](6_hypothesis_testing.md#example-1-one-sided-z-statistic-with-one-sample)
     - [Example 2 (Two-Sided Z-Statistic with One Sample)](6_hypothesis_testing.md#example-2-two-sided-z-statistic-with-one-sample)
     - [Example 3 (Z-Statistic with Multiple Samples)](6_hypothesis_testing.md#example-3-z-statistic-with-multiple-samples)
     - [Example 4 (T-Statistic)](6_hypothesis_testing.md#example-4-t-statistic)
+    - [Example 5 (Chi-square-Statistic for Goodness-of-Fit Test)](6_hypothesis_testing.md#example-5-chi-square-statistic-for-goodness-of-fit-test)
+    - [Example 6 (Chi-square-Statistic for Test of Independence)](6_hypothesis_testing.md#example-6-chi-square-statistic-for-test-of-independence)
+    - [Example 7 (Chi-square-Statistic for Test of Homogeneity](6_hypothesis_testing.md#example-7-chi-square-statistic-for-test-of-homogeneity)
+
 
 ---
 

@@ -114,6 +114,50 @@ Note:
 - T ~ t-distribution with 𝛼 and degree of freedoms n - 1
 Note the only difference between Z-statistic and T-statistic is using the true variance σ vs. the sample variance s.
 
+### Pearson Chi-square Test Statistic
+
+Z-statistic and T-Statistic are parametric statistics:
+- Assume some knowledge about the parent population (e.g. normal distribution or binomial distribution).
+- Measurements at interval scale.
+
+Chi-square test concerns with categorical data:
+| Test Type | Null Hypothesis | Example |
+|---|---|---|
+| Goodness-of-Fit | The observed data follows the expected distribution | Roll a 6-sided die 60 times. H₀: the die is fair, each side has probability 1/6 |
+| Test of Independence | Two variables are independent | Survey people on gender and voting preference. H₀: gender and voting preference are not associated |
+| Test of Homogeneity | The distributions of the categorical variable are the same across groups | Test whether 3 different cities have the same preference distribution for soda brands |
+
+The pearson chi-square statistic:
+
+<img style="width:22%;display:block;margin:auto;" src="imgs/6_chisquare_statistic.png" alt="chisquare_statisitc">
+
+Note:
+- Oᵢ is the number of observations of type i.
+- Eᵢ = Npᵢ is the expected count of type i, under the null hypothesis that the fraction of type i in the population is pᵢ.
+- The smaller 𝒳²(n) the better.
+
+#### Pearson Chi-square Statistic Follows Chi-square Distribution?
+
+Transform the original statistic
+
+    𝒳²(n) = ∑((Oᵢ - Eᵢ)²/Eᵢ)    for 1 ≤ i ≤ n
+          = ∑((Oᵢ - Eᵢ)/sqrt(Eᵢ))²
+
+Based on chi-square's property, **if we can prove Zᵢ = (Oᵢ - Eᵢ)/sqrt(Eᵢ) ~ N(0, 1), then ∑Zᵢ² follows chi-square distribution**.
+
+    Key idea: each observed count Oᵢ is a random variable that follows a binomial or multinomial
+    distribution under the hypothesis.
+
+    Oᵢ is essentially the number of successes in n trials with probability fo success pᵢ.
+    For a large enough n, the binomial variable Oᵢ is approximately:
+        Oᵢ ~ N(Npᵢ, Npᵢqᵢ) = N(Eᵢ, Eᵢqᵢ).
+    So:
+        (Oᵢ - Eᵢ) / sqrt(Eᵢqᵢ) = Zᵢ / sqrt(qᵢ) ~ N(0, 1)
+
+    qᵢ is not necessarily close to 1, how could Zᵢ approximates to standard normal distribution???
+    An extreme case is a 2 categorical data with q₀ = 0.99 and q₁ = 0.01.
+    Z₀ is close to standard normal distribution, but apparently Z₁ is NOT!
+
 ### Hypothesis Testing Using Confidence Intervals
 
 Confidence intervals use T-transformation to estimate population mean interval from sample mean and variance with 100(1 - α)% probability.
@@ -212,3 +256,107 @@ Therefore, sqrt(1) is ignored and the used formula is still a Z-statistic.
         Reject H₀ if t < -4.303 or t > 4.303
     (4) t = (202 - 215) / sqrt(172 / 3) = -1.717
         The null hypothesis H₀ cannot be rejected with level of significance 0.05.
+
+### Example 5 (Chi-square-Statistic for Goodness-of-Fit Test)
+
+    Below are the results of rolling a die 60 times. Do you consider the die fair?
+
+        |  Face | Observed Frequency |
+        | ----- | ------------------ |
+        | 1     | 8                  |
+        | 2     | 9                  |
+        | 3     | 10                 |
+        | 4     | 11                 |
+        | 5     | 12                 |
+        | 6     | 10                 |
+        | Total | 60                 |
+
+    Solution:
+    H₀: the die is fair, each face has probability 1/6
+    H₁: the die is not fair (at least one face has a difference probability)
+
+    Under H₀ each face should occur 60 / 6 = 10 times, i.e. Eᵢ = 10
+
+    Compute chi-square statistic:
+    𝒳²(n) = ∑((Oᵢ - Eᵢ)²/Eᵢ)
+          = (8 - 10)²/10 + (9 - 10)²/10 ... + (10 - 10)²/10
+          = 1.0
+
+    Degrees of freedom (df) = number of categories - 1
+                            = 6 - 1
+                            = 5
+
+    For 𝛼 = 0.05 and df = 5, 𝑥² = 11.070
+    Since 𝒳²(n) ≪ 𝑥², H₀ can NOT be rejected.
+    We consider the die is fair.
+
+### Example 6 (Chi-square-Statistic for Test of Independence)
+
+    Here is a survey of 100 people about their gender and voting preference (Party A or Party B):
+
+        |              | Party A | Party B | Row Total |
+        | ------------ | ------- | ------- | --------- |
+        | Male         | 20      | 30      | 50        |
+        | Female       | 30      | 20      | 50        |
+        | Column Total | 50      | 50      | 100       |
+
+    Do you consider gender and voting preference are independent?
+
+    Solution:
+    H₀: gender and voting preference are independent.
+    H₁: gender and voting are associated.
+
+    Compute expected counts for each table cell:
+        Eᵢⱼ = (Row Totalᵢ) * (Column Totalⱼ) / Total
+
+        |        |    Party A   |    Party B   |
+        | ------ | ------------ | ------------ |
+        | Male   | 50*50/100=25 | 50*50/100=25 |
+        | Female | 50*50/100=25 | 50*50/100=25 |
+
+    Compute chi-square statistic:
+    𝒳² = ∑((Oᵢⱼ - Eᵢⱼ)²/Eᵢⱼ)
+       = (20 - 25)²/25 + (30 - 25)²/25 ... + (20 - 25)²/25
+       = 4.0
+
+    Degrees of freedom (df) = (rows - 1) * (columns - 1) = 1
+
+    For 𝛼 = 0.05 and df = 1, 𝑥² = 3.841
+    Since 𝒳²(n) > 𝑥², we can reject H₀ and consider gender and voting are NOT independent.
+
+### Example 7 (Chi-square-Statistic for Test of Homogeneity)
+
+    Here is a survey of voters in 3 cities about their preferred political party: A, B, or C.
+
+        | City          | Party A | Party B | Party C | Row Total |
+        | ------------- | ------- | ------- | ------- | --------- |
+        | City 1        | 30      | 10      | 10      | 50        |
+        | City 2        | 20      | 20      | 10      | 50        |
+        | City 3        | 10      | 30      | 10      | 50        |
+        | Column Totals | 60      | 60      | 30      | 150       |
+
+    Do you consider these 3 cities have the same party preference distribution?
+
+    Solution:
+    H₀: all cities have the same party preference distribution.
+    H₁: at least one city's party preference distribution is different.
+
+    Compute expected counts for each table cell:
+        Eᵢⱼ = (Row Totalᵢ) * (Column Totalⱼ) / Total
+
+        | City   |    Party A   |    Party B   |    Party C   |
+        | ------ | ------------ | ------------ | ------------ |
+        | City 1 | 50*60/150=20 | 50*60/150=20 | 50*30/150=10 |
+        | City 2 | 50*60/150=20 | 50*60/150=20 | 50*30/150=10 |
+        | City 3 | 50*60/150=20 | 50*60/150=20 | 50*30/150=10 |
+
+    Compute chi-square statistic:
+    𝒳² = ∑((Oᵢⱼ - Eᵢⱼ)²/Eᵢⱼ)
+       = (30 - 20)²/20 + (10 - 20)²/20 + (10 - 10)²/10... + (10 - 10)²/25
+       = 20.0
+
+    Degrees of freedom (df) = (rows - 1) * (columns - 1) = 4
+
+    For 𝛼 = 0.05 and df = 4, 𝑥² = 9.488
+    Since 𝒳²(n) > 𝑥², we can reject H₀ and consider not all cities share the same distribution
+    of party preference.

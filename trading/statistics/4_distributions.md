@@ -364,7 +364,7 @@ Below are some examples of how to use standardized scores to address various que
     p(Z ≤ -1.5) = 1 - p(Z ≤ 1.5)
                 = 1 - 0.9332
                 = 0.0668
-### Example 3
+#### Example 3
 
     A new tax law is expected to benefit “middle income” families, those with incomes between
     $20,000 and $30,000. If Family income ~ N(25000, 10000²), what percentage of the population
@@ -519,17 +519,32 @@ Gamma distributions model the probability of the waiting time w until the 𝛼�
 
 ## Chi-Square Distributions
 
-The chi-square distribution is just a special case of the gamma distribution!
+The Chi-Square distribution is used in various statistical tests, such as the **Chi-Square goodness-of-fit** test, which evaluates whether an observed frequency distribution fits an expected theoretical distribution, and the **Chi-Square test for independence**, which checks the association between categorical variables in a contingency table.
 
 ### Properties
 
-- Let X follow a gamma distribution with 0 = 2 and 𝛼 = r/2, then its the probability density function (PDF) is:
+- The chi-square distribution is just a special case of the gamma distribution!
+Let X follow a gamma distribution with **𝛼 = r/2 and θ = 2**, then its the probability density function (PDF) is:
 
     <img style="width:35%;display:block;margin:auto;" src="imgs/4_chisquare_dist_pdf.png" alt="chisquare_dist_pdf">
 
     - r is a positive integer.
     - X follows a chi-square distribution with r degrees of freedom, denoted 𝒳²\(r\), read "chi-square-r."
 
+- Curves with changing r (degrees of freedom).
+
+    <img style="width:50%;display:block;margin:auto;" src="imgs/4_chisquare_dist_curve.webp" alt="chisquare_dist_curve">
+
+    - Curve is not symmetric and all values are positive.
+    - The shape depends on the degrees of freedom.
+
 - Mean and variance of a chi-square random variable with r degrees of freedom are r and 2r.
 
+- Relationship with **standard** normal distribution:
 
+        Suppose the X₁, X₂, ... Xₙ random variables of standard normal distribution, then:
+
+            X₁² + X₂² + ... + Xₙ² ~ 𝒳²(n)
+
+        That is: sum of the squares of n independent standard normal random variables follows
+        the Chi-Square distribution with n degrees of freedom.

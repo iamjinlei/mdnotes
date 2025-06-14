@@ -69,7 +69,6 @@ Suppose we want to take a sample of n **independent** observations in order to d
 - Note the ^ used for sample mean μ̂ and variance σ̂².
 It is common to use a ^ over a population parameter to represent the corresponding sample estimate.
 
-
 ## Sample Distributions
 
 Obviously, taking different samples yeilds different x̄.
@@ -85,6 +84,19 @@ Therefore X̄ is itself a random variable, which has its own mean and variance:
          = σ² / n
 
     StdDev(X̄) = σ / sqrt(n)    also known as the true standard error of the mean
+
+### Central Limit Theorem
+
+The central limit theorem (CLT) is one of the most important results in probability theory.
+It states that, under certain conditions, the sum of a large number of random variables is approximately normally distributed.
+
+    Suppose the X₁, X₂, ... Xₙ random variables that are independent and identically distributed
+    (iid) with expected mean and variance E(Xᵢ) = μ  and V(Xᵢ) = σ².
+
+    Then the random variable sample mean X̄ = (X₁ + X₂ + ... + Xₙ) / n is normally distributed with
+    E(X̄) = μ and V(X̄) = σ² / n.
+
+    Note the original random variables X₁ are not necessarily normally distributed.
 
 ### Why Does Sample Mean Variance V(X̄) Have Denominator n?
 
