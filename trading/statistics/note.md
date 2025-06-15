@@ -37,10 +37,12 @@ nav:
 - [Permutations and Combinations](4_distributions.md#permutations-and-combinations)
     - [Permutations](4_distributions.md#permutations)
     - [Combinations](4_distributions.md#combinations)
+- [The Hypergeometric Distribution](4_distributions.md#the-hypergeometric-distribution)
+    - [Mean and Variance](4_distributions.md#mean-and-variance)
 - [The Binomial Distribution](4_distributions.md#the-binomial-distribution)
     - [Bernoulli Trial](4_distributions.md#bernoulli-trial)
     - [Binomial Distribution](4_distributions.md#binomial-distribution)
-    - [Mean and Variance](4_distributions.md#mean-and-variance)
+    - [Mean and Variance](4_distributions.md#mean-and-variance-1)
     - [Shape](4_distributions.md#shape)
     - [Examples](4_distributions.md#examples)
 - [The Poisson Distribution](4_distributions.md#the-poisson-distribution)
@@ -79,8 +81,9 @@ nav:
 - [Test Statistics](6_hypothesis_testing.md#test-statistics)
     - [Z Test Statistic](6_hypothesis_testing.md#z-test-statistic)
     - [T Test Statistic](6_hypothesis_testing.md#t-test-statistic)
-    - [Pearson Chi-square Test Statistic](6_hypothesis_testing.md#pearson-chi-square-test-statistic)
     - [Hypothesis Testing Using Confidence Intervals](6_hypothesis_testing.md#hypothesis-testing-using-confidence-intervals)
+    - [Pearson Chi-square Test Statistic](6_hypothesis_testing.md#pearson-chi-square-test-statistic)
+    - [Fisher’s Exact Test](6_hypothesis_testing.md#fisher-s-exact-test)
 - [Examples](6_hypothesis_testing.md#examples)
     - [Example 1 (One-Sided Z-Statistic with One Sample)](6_hypothesis_testing.md#example-1-one-sided-z-statistic-with-one-sample)
     - [Example 2 (Two-Sided Z-Statistic with One Sample)](6_hypothesis_testing.md#example-2-two-sided-z-statistic-with-one-sample)
@@ -89,6 +92,7 @@ nav:
     - [Example 5 (Chi-square-Statistic for Goodness-of-Fit Test)](6_hypothesis_testing.md#example-5-chi-square-statistic-for-goodness-of-fit-test)
     - [Example 6 (Chi-square-Statistic for Test of Independence)](6_hypothesis_testing.md#example-6-chi-square-statistic-for-test-of-independence)
     - [Example 7 (Chi-square-Statistic for Test of Homogeneity](6_hypothesis_testing.md#example-7-chi-square-statistic-for-test-of-homogeneity)
+    - [Example 8 (Fisher’s Exact Test)](6_hypothesis_testing.md#example-8-fisher-s-exact-test)
 
 
 ---
@@ -97,6 +101,7 @@ nav:
 
 - [ChatGPT](https://chatgpt.com/)
 - [Sociology Graduate Statistics | University of Notre Dame](https://www3.nd.edu/~rwilliam/stats1/)
-- [STAT 414 Introduction to Probability Theory | Penn State](https://online.stat.psu.edu/stat414/lesson/10/10.4)
+- [STAT 414 Introduction to Probability Theory | Penn State](https://online.stat.psu.edu/stat414/)
+- [STAT 504 Analysis of Discrete Data | Penn State](https://online.stat.psu.edu/stat504/)
 - H. Pishro-Nik, "Introduction to probability, statistics, and random processes", available at https://www.probabilitycourse.com, Kappa Research LLC, 2014.
 - [EconMacro](https://www.jamelsaadaoui.com/unbiased-estimator-for-population-variance-clearly-explained/)

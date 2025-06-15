@@ -200,28 +200,16 @@ Note the expected cell count is not the value directly from the table. Instead, 
 #### Hypergeometric Distribution
 
 The Fisher's exact test can calculate probability using hypergeometric distribution.
-The table shown maps a problem in question to the corresponding hypergeometric statement, given fixed N, m, n.
 
-|             | Successes | Failures   | Total |
-| ----------- | -------- | ----------- | ----- |
-| Sampled     | x = a    | n-x = b     | n     |
-| Not Sampled | m-x = c  | N-m-n+x = d | N-n   |
-| Total       | m        | N-m         | N     |
+        |             | Successes | Failures | Total |
+        | ----------- | -------- | --------- | ----- |
+        | Sampled     | x        | n-x       | n     |
+        | Not Sampled | m-x      | N-m-n+x   | N-n   |
+        | Total       | m        | N-m       | N     |
 
-Hypergeometric probability gives chance of getting this exact table.
-With a simple transformation, we can get the probabilty of getting the exact table:
 
-    p(X = x) = ((a+b)! * (c+d)! * (a+c)! * (b+d)!) / (a! * b! * c! * d! * N!)
-
-#### P-Value
-
-The p-value is calculated as ∑p(X ≤ x) or ∑p(X ≥ x) depending on the definition of extreme.
-It represents the probability of observing the data if the null hypothesis were true.
-If the alternative hypothesis is really about the "Sampled" action causes more "Successes" (hence are associated), then it should use ∑p(X ≥ x).
-A small p-value means, if the null hypothesis were true, the observed data (or more extreme) is unlikely to have occurred by random chance.
-But the table data is observed.
-This leads to the rejection of the null hypothesis and suggests a statistically significant association between variables.
-
+The p-value is calculated as the probability (under the null hypothesis of independence) of observing a table as exteme or more extreme than the one you got, given the fixed row and column totals.
+So the p-value is often the sum of multiple calculated hypergeometric probability.
 
 ## Examples
 
@@ -414,23 +402,20 @@ Therefore, sqrt(1) is ignored and the used formula is still a Z-statistic.
 
 ### Example 8 (Fisher’s Exact Test)
 
-    Here is a clinical trial tests a vaccine on a small group.
+    Here is a small clinical trial with 10 patients to test if a new drug is effective.
 
-        |         | Infected | Not Infected | Total |
+        |         | Improved | Not Improved | Total |
         | ------- | -------- | ------------ | ----- |
-        | Vaccine | 1        | 9            | 10    |
-        | Placebo | 8        | 2            | 10    |
-        | Total   | 9        | 11           | 20    |
+        | Drug    | 4        | 1            | 5     |
+        | Placebo | 1        | 4            | 5     |
+        | Total   | 5        | 5            | 10    |
 
-    Do you consider infection status is associated with receiving the vaccine?
+    Do you consider the improvement is associated with receiving the drug?
 
     Solution:
-    H₀: Vaccination and infection are independent (vaccine does not reduce infection).
-    H₁: Vaccination and infection are associated.
+    H₀: the treatment and improvement are independent (drug does not help).
+    H₁: the treatment and improvement are associated.
 
-    p-value = p(X = 1) + p(X = 0)
-            = 0.0268 + 0.0006
-            = 0.0275
-    Since p-value < 0.05, the chance of observing extreme cases should be rare.
-    But we observed it.
-    H₀ is rejected, i.e. vaccine appears effective in reducing infection.
+    p-value = ₅C₄ * ₅C₁ / ₁₀C₅ ≈ 0.099
+    The p-value means if improvement and treatment are truly independent, the chance of
+

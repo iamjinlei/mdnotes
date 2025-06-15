@@ -83,6 +83,26 @@ Combination is also often represented using following notion:
 
 <img style="width:25%;display:block;margin:auto;" src="imgs/4_combination_notion.png" alt="combination_notion">
 
+## The Hypergeometric Distribution
+
+Hypergeometric distribution describes the probability of **x** successes when:
+- randomly sampling **n** items without replacement
+- from a set of **N** items with **m** successes
+
+Its probability mass function (PMF) is defined as:
+
+<img style="width:40%;display:block;margin:auto;" src="imgs/4_hypergeometric_dist_pmf.png" alt="hypergeometric_dist_pmf">
+
+The PMF calculates the probability of picking n items that contains x successes:
+- ɴCₙ is the total number of ways of choosing n items from N.
+- ₘCₓ is the number of ways of choosing x successes from all m successes.
+- ₍ɴ₋ₘ₎C₍ₙ₋ₓ₎is the number of ways of choosing (n- x) failures from all (N - m) failures.
+
+### Mean and Variance
+
+    Mean: E(X) = nm / N
+    Variance: V(X) = n * ɴCₘ * ɴC₍ɴ₋ₘ₎ * ₍ɴ₋ₙ₎C₍ɴ₋₁₎
+
 
 ## The Binomial Distribution
 
@@ -105,10 +125,10 @@ The term **identically distributed** is also often used.
 
 A binomial distribution gives us the probabilities associated with independent, repeated Bernoulli trials.
 
-<mark hl>A **binomial distribution** describes the probabilities of those of</mark>
-- <mark hl>receiving a certain number of successes, **r**,</mark>
-- <mark hl>in **N** independent trials, each having only 2 possible outcomes,</mark>
-- <mark hl>with the same probability of success, **p**.</mark>
+A binomial distribution describes the probabilities of those of
+- receiving a certain number of successes, **r**,
+- in **N** independent trials, each having only 2 possible outcomes,
+- with the same probability of success, **p**.
 
 The probability of getting r successes in N independent trials with each having p success probability:
 
