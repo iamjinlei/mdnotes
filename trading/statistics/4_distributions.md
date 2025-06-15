@@ -391,6 +391,11 @@ The normal distribution can be used to approximate the binomial distribution.
         - p(X ≤ a + 0.5) for p(X ≤ a)
         - p(X ≥ a + 0.5) for p(X ≥ a + 1)
 
+#### Why?
+
+Based on **Central Limit Theorem**, each Bernoulli event can be seen as a random variable with p probability of success and (1 - p) probability of failure.
+Then their mean X̄ = (X₁ + X₂ + ... + Xₙ) / n is normally distributed with E(X̄) = μ and V(X̄) = σ² / n.
+Note the binomial variable X is X̄*n, which is also normally distributed with E(X) = nμ = np and V(X) = σ² = npq.
 
 ## Exponential Distributions
 

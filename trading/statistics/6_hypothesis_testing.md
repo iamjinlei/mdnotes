@@ -158,6 +158,8 @@ Based on chi-square's property, **if we can prove Zᵢ = (Oᵢ - Eᵢ)/sqrt(Eᵢ
     An extreme case is a 2 categorical data with q₀ = 0.99 and q₁ = 0.01.
     Z₀ is close to standard normal distribution, but apparently Z₁ is NOT!
 
+To answer the above question, it requires a quite lengthy proof that can be found [here](./resources/6_pearson_chisquare_proof.pdf), a [course material](https://ocw.mit.edu/courses/18-443-statistics-for-applications-fall-2006/pages/lecture-notes/) from MIT.
+
 ### Hypothesis Testing Using Confidence Intervals
 
 Confidence intervals use T-transformation to estimate population mean interval from sample mean and variance with 100(1 - α)% probability.
