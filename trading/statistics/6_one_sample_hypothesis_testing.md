@@ -5,7 +5,7 @@ nav:
 left_pane: toc
 --->
 
-# 6 Hypothesis Testing
+# 6 One Sample Hypothesis Testing
 
 ## Concepts
 
@@ -134,7 +134,7 @@ Z-statistic and T-Statistic are parametric statistics:
 - Assume some knowledge about the parent population (e.g. normal distribution or binomial distribution).
 - Measurements at interval scale.
 
-Chi-square test concerns with categorical data:
+Chi-square test concerns with <mark hl>categorical data</mark>:
 | Test Type | Null Hypothesis | Example |
 |---|---|---|
 | Goodness-of-Fit | The observed data follows the expected distribution | Roll a 6-sided die 60 times. H₀: the die is fair, each side has probability 1/6 |
