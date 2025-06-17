@@ -106,6 +106,17 @@ nav:
 - [Case 5: Difference Between Two Proportions](7_two_samples_hypothesis_testing.md#case-5-difference-between-two-proportions)
     - [Example](7_two_samples_hypothesis_testing.md#example-4)
 
+## 8 [Analysis of Variance (ANOVA)](8_analysis_of_variance.md)
+- [One-Way Analysis of Variance](8_analysis_of_variance.md#one-way-analysis-of-variance)
+    - [Simple One-Factor Model](8_analysis_of_variance.md#simple-one-factor-model)
+    - [The Test](8_analysis_of_variance.md#the-test)
+    - [Example](8_analysis_of_variance.md#example)
+    - [Post Hoc Tests](8_analysis_of_variance.md#post-hoc-tests)
+- [Two-Way Analysis of Variance](8_analysis_of_variance.md#two-way-analysis-of-variance)
+    - [Two-Treatments Model](8_analysis_of_variance.md#two-treatments-model)
+    - [Tests of Interest](8_analysis_of_variance.md#tests-of-interest)
+    - [Example](8_analysis_of_variance.md#example-1)
+
 
 ---
 

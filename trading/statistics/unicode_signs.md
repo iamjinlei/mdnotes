@@ -28,6 +28,8 @@ X̄
 𝒳
 𝑥
 
+ȳ
+
 E(X) = ∫x𝑓(x)𝑑x = µₓ
 
 ≤
@@ -47,12 +49,16 @@ E(X) = ∫x𝑓(x)𝑑x = µₓ
 𝑓(x)
 𝐹(a)
 ɴCᵣ reads as N choose r
+ᴀ latin small capital A
 
 𝛼
 β
 λ
+μ
 θ
 σ
+ε
+𝜏
 
 θ̂
 μ̂
