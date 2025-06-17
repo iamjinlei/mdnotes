@@ -94,6 +94,18 @@ nav:
     - [Example 7 (Chi-square-Statistic for Test of Homogeneity](6_one_sample_hypothesis_testing.md#example-7-chi-square-statistic-for-test-of-homogeneity)
     - [Example 8 (Fisher’s Exact Test)](6_one_sample_hypothesis_testing.md#example-8-fisher-s-exact-test)
 
+## 7 [Two Samples Hypothesis Testing](7_two_samples_hypothesis_testing.md)
+- [Case 1: Variances Are Known](7_two_samples_hypothesis_testing.md#case-1-variances-are-known)
+    - [Example](7_two_samples_hypothesis_testing.md#example)
+- [Case 2: Variances Are Unknown But Equal](7_two_samples_hypothesis_testing.md#case-2-variances-are-unknown-but-equal)
+    - [Example](7_two_samples_hypothesis_testing.md#example-1)
+- [Case 3: Variances Are Unknown and Unequal](7_two_samples_hypothesis_testing.md#case-3-variances-are-unknown-and-unequal)
+    - [Example](7_two_samples_hypothesis_testing.md#example-2)
+- [Case 4: Matched Pairs with Unknown Variances](7_two_samples_hypothesis_testing.md#case-4-matched-pairs-with-unknown-variances)
+    - [Example](7_two_samples_hypothesis_testing.md#example-3)
+- [Case 5: Difference Between Two Proportions](7_two_samples_hypothesis_testing.md#case-5-difference-between-two-proportions)
+    - [Example](7_two_samples_hypothesis_testing.md#example-4)
+
 
 ---
 

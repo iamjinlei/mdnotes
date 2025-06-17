@@ -118,7 +118,7 @@ Note the only difference between Z-statistic and T-statistic is using the true v
 
 Confidence intervals use T-transformation to estimate population mean interval from sample mean and variance with 100(1 - α)% probability.
 This is essentially the same as the T-statistic:
-- Null hypothesis H₀: E(X) = μ₀, alternative two-tailed hypothesis H₁: E(X) <> μ₀.
+- Null hypothesis H₀: E(X) = μ₀, alternative two-tailed hypothesis H₁: E(X) ≠ μ₀.
 - H₀ will not be rejected at α level of significant if μ₀ falls within the 100(1 - α)% confidence interval.
 - H₀ will be rejected at α level of significant if μ₀ does not fall within the 100(1 - α)% confidence interval.
 - The use of either confidence intervals or acceptance regions should lead to the same conclusion when testing a two-tailed alternative.
@@ -257,7 +257,7 @@ This leads to the rejection of the null hypothesis and suggests a statistically 
     When n is large, we can use X ~ N(np, npq) = N(32, 16)
     (1) Define hypotheses:
         H₀: E(X) = 32 heads
-        H₁: E(X) <> 32 heads
+        H₁: E(X) ≠ 32 heads
     (2) Use Z = (number of heads ± 0.5 - 32) / sqrt(16) as the test statistic.
     (3) Acceptance region is p(-z ≤ Z ≤ z) = 0.95 = 1 - α.
         So z = 1.96
@@ -279,7 +279,7 @@ Therefore, sqrt(1) is ignored and the used formula is still a Z-statistic.
     Since population μ and σ² are known, Z-statistic can be used.
     (1) Define hypotheses:
         H₀: E(X) = μ₀ = 8.6
-        H₁: E(X) <> 8.6
+        H₁: E(X) ≠ 8.6
     (2) Use Z = (X̄ - μ₀) / (σ / sqrt(n)) ~ N(0, 1) as the test statistic
     (3) Acceptance region is p(-z ≤ Z ≤ z) = 0.95 = 1 - 2 * α.
         So z = 1.96
@@ -300,7 +300,7 @@ Therefore, sqrt(1) is ignored and the used formula is still a Z-statistic.
        = 172
     (1) Define hypotheses:
         H₀: E(X) = μ₀ = 215
-        H₁: E(X) <> 215
+        H₁: E(X) ≠ 215
     (2) Use T = (X̄ - μ₀) / (s / sqrt(n)) ~ t-distribution with α and degree of freedoms 2.
     (3) Critical region is p(-t ≤ T ≤ t) = 0.05 = α.
         So t = 4.303
