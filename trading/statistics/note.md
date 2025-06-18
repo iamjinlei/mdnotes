@@ -117,6 +117,7 @@ nav:
     - [Tests of Interest](8_analysis_of_variance.md#tests-of-interest)
     - [Example](8_analysis_of_variance.md#example-1)
 
+## 9 [Bivariate Regression](9_bivariate_regression.md)
 
 ---
 

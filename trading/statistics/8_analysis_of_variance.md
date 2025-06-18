@@ -178,7 +178,7 @@ When there are 2 treatments, the model can be written as:
 
     yᵢⱼₖ = μ + 𝜏ⱼ + λₖ + (𝜏λ)ⱼₖ + εᵢⱼₖ
 
-    where
+    where:
         μ = the grand mean
         𝜏ⱼ = the treatment effect for the jth category of the row variable
         λₖ - the treatment effect for the kth category of the column variable

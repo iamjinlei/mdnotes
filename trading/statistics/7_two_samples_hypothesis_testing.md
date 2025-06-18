@@ -223,18 +223,18 @@ Confidence interval:
     A researcher constructed a scale to measure influence on family decision-making, and collected
     the following data from 8 pairs of husbands and wives:
 
-        |  Pair# | H score | W score |
-        | ------ | ------- | ------- |
-        | 1      | 26      | 30      |
-        | 2      | 28      | 29      |
-        | 3      | 28      | 28      |
-        | 4      | 29      | 27      |
-        | 5      | 30      | 26      |
-        | 6      | 31      | 25      |
-        | 7      | 34      | 24      |
-        | 8      | 37      | 23      |
-        | ------ | ------- | ------- |
-        | Sum    | 243     | 212     |
+        | Pair# | H score | W score |
+        | ----- | ------- | ------- |
+        | 1     | 26      | 30      |
+        | 2     | 28      | 29      |
+        | 3     | 28      | 28      |
+        | 4     | 29      | 27      |
+        | 5     | 30      | 26      |
+        | 6     | 31      | 25      |
+        | 7     | 34      | 24      |
+        | 8     | 37      | 23      |
+        | ----- | ------- | ------- |
+        | Sum   | 243     | 212     |
 
     Test, at the 0.05 level of significance, whether there is any significant difference between
     the average scores of husbands and wives.
