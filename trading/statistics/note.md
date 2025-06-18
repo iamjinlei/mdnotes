@@ -118,6 +118,9 @@ nav:
     - [Example](8_analysis_of_variance.md#example-1)
 
 ## 9 [Bivariate Regression](9_bivariate_regression.md)
+- [Ordinary Least Squares (OLS) Regression](9_bivariate_regression.md#ordinary-least-squares-ols-regression)
+    - [The OLS Model](9_bivariate_regression.md#the-ols-model)
+    - [Sample Estimation](9_bivariate_regression.md#sample-estimation)
 
 ---
 
