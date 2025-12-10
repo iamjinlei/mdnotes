@@ -20,6 +20,8 @@ banner: assets/banner_1280.jpg
 
 [疯狂的尿酸](health/疯狂的尿酸/note.md)
 
+[循证抗炎饮食](health/循证抗炎饮食/note.md)
+
 ## Trading
 
 [Statistics](trading/statistics/note.md)
