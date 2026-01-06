@@ -133,7 +133,17 @@ set expandtab
 
 set viminfo='20,<1000
 ```
+## Fix Slow VIM Auto-Save
 
+This is most likely caused by malfunctioning `gopls` server.
+Try delete gopls index and restart its server:
+
+```
+rm -rf ~/Library/Caches/gopls/*
+killall gopls
+```
+
+Opening a new .go file should start gopls server automatically.
 
 # .ssh
 
