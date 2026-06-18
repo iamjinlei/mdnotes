@@ -148,3 +148,26 @@ Opening a new .go file should start gopls server automatically.
 # .ssh
 
 It is ok to copy over .ssh folders with existing private and public keys
+
+
+# Fix for Golang Build Freeze on Small EC2 Host
+
+when your RAM fills up (e.g., during go build), the kernel pages out less-used memory to this file on disk instead of freezing or killing processes.
+It's slower than RAM but prevents the machine from locking up.
+
+```
+# 1. Create a 4GB file filled with zeros — this becomes the swap space
+sudo fallocate -l 4G /swapfile
+
+# 2. Restrict permissions — only root should read/write swap (security)
+sudo chmod 600 /swapfile
+
+# 3. Format the file as swap space (writes a swap header)
+sudo mkswap /swapfile
+
+# 4. Activate it immediately — kernel starts using it as overflow memory
+sudo swapon /swapfile
+
+# 5. Make it persist across reboots by adding to filesystem table
+echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+```
